@@ -7,13 +7,11 @@ export const rotate = keyframes`
 `;
 
 export const LoaderContainer = styled.div`
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: absolute;
-   top: 0;
-`
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const InfiniteRotate = styled.div`
   animation: ${rotate} 1s linear infinite;
