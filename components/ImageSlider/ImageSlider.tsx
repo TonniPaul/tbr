@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
 import {
   ImageSliderContainer,
   ImageContainer,
@@ -7,7 +6,6 @@ import {
   PrevButton,
   NextButton,
 } from "./imageSlider.styles";
-
 
 type ImageSliderProps = {
   images: string[];
@@ -31,11 +29,11 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
       nextImage();
     }, 8000);
     return () => clearInterval(interval);
-  }, [nextImage]);
+  }, [nextImage, prevImage]);
 
   return (
     <ImageSliderContainer>
-      <PrevButton onClick={prevImage}>{"<<"}</PrevButton>
+      <PrevButton onClick={prevImage}>{"<"}</PrevButton>
       <ImageContainer>
         {images.map((imageUrl, index) => (
           <SliderImages
@@ -47,7 +45,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
         ))}
       </ImageContainer>
       <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-      <NextButton onClick={nextImage}>{">>"}</NextButton>
+      <NextButton onClick={nextImage}>{">"}</NextButton>
     </ImageSliderContainer>
   );
 };

@@ -1,12 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const pulseBack = keyframes`
+  50% {transform : translateX(-10px);}
+`;
+
+export const pulseNext = keyframes`
+  50% {transform : translateX(10px);}
+`;
 
 export const ImageSliderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 300px;
   background: black;
   position: relative;
+
+  @media (min-width: 768px) {
+    height: 500px;
+  }
 
   & > h1 {
     position: absolute;
@@ -43,8 +55,7 @@ export const SliderImages = styled.img<{ isCurrent: boolean }>`
 
 export const SliderButton = styled.button`
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 5%;
   font-size: 2rem;
   border: none;
   background: none;
@@ -53,15 +64,21 @@ export const SliderButton = styled.button`
   transition: opacity 0.3s;
   z-index: 2;
 
+  @media (min-width: 768px) {
+    bottom: 30%;
+  }
+
   &:hover {
     opacity: 0.7;
   }
 `;
 
 export const PrevButton = styled(SliderButton)`
-  left: 10px;
+  left: 20px;
+  animation: ${pulseBack} 3s infinite;
 `;
 
 export const NextButton = styled(SliderButton)`
-  right: 10px;
+  right: 20px;
+  animation: ${pulseNext} 3s infinite;
 `;
