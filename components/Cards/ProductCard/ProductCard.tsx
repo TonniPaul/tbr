@@ -11,7 +11,7 @@ const ProductCard = () => {
     <div>
       <ProductCardContainerStyle>
         <Image
-          src={"/assets/logo-yello.png"}
+          src="/assets/logo-yello.png"
           alt="product-image"
           width={300}
           height={250}
