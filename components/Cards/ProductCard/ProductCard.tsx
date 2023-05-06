@@ -5,13 +5,14 @@ import {
   ProductPriceStyle,
   ProductTitleStyle,
 } from "./productCard.styles";
+import productImage from "../../../public/assets/Logo-yello.png";
 
 const ProductCard = () => {
   return (
     <div>
       <ProductCardContainerStyle>
         <Image
-          src="/assets/logo-yello.png"
+          src={productImage}
           alt="product-image"
           width={300}
           height={250}
