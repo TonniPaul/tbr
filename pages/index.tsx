@@ -1,5 +1,7 @@
-import Hero from '@/components/Hero/Hero';
-import Head from 'next/head';
+import ProductCard from "@/components/Cards/ProductCard/ProductCard";
+import ProductSectionsCard from "@/components/Cards/ProductSectionsCard/ProductSectionsCard";
+import Hero from "@/components/Hero/Hero";
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <ProductSectionsCard />
       </main>
     </>
   );
