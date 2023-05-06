@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1212",
+    "link": "/",
+    "placeholder": "Home",
+    "icon": "/assets/home-icon.svg"
+  },
+  {
+    "id": "1282",
+    "link": "/shop",
+    "placeholder": "Shop",
+    "icon": "/assets/shop-icon.svg"
+  },
+  {
+    "id": "12sjb",
+    "link": "/about",
+    "placeholder": "About Us",
+    "icon": "/assets/newspaper.svg"
+  },
+  {
+    "id": "1727",
+    "link": "/contact",
+    "placeholder": "Contact Us",
+    "icon": "/assets/call_icon.svg"
+  }
+]

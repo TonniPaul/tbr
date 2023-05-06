@@ -1,0 +1,352 @@
+[
+  {
+    "id": "001",
+    "name": "Red T-Shirt",
+    "description": "A comfortable and stylish red T-shirt made from 100% cotton.",
+    "price": 1999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "002",
+    "name": "Blue Jeans",
+    "description": "Classic blue jeans made from high-quality denim.",
+    "price": 3999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "003",
+    "name": "Black Hoodie",
+    "description": "A cozy black hoodie perfect for chilly days.",
+    "price": 2999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "004",
+    "name": "White Sneakers",
+    "description": "Comfortable white sneakers that go with any outfit.",
+    "price": 5999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "005",
+    "name": "Leather Wallet",
+    "description": "A stylish leather wallet with multiple card slots and a coin pocket.",
+    "price": 4999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "006",
+    "name": "Silver Earrings",
+    "description": "Elegant silver earrings with a modern design.",
+    "price": 2499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "007",
+    "name": "Gold Bracelet",
+    "description": "A simple and timeless gold bracelet.",
+    "price": 7999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "008",
+    "name": "Black Leather Jacket",
+    "description": "A classic black leather jacket that never goes out of style.",
+    "price": 14999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "009",
+    "name": "Grey Sweatpants",
+    "description": "Comfortable and casual grey sweatpants.",
+    "price": 2499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "010",
+    "name": "Red High Heels",
+    "description": "Bold and stylish red high heels.",
+    "price": 8999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "011",
+    "name": "Blue Button-Up Shirt",
+    "description": "A classic blue button-up shirt made from high-quality cotton.",
+    "price": 2999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "012",
+    "name": "Black Leather Boots",
+    "description": "Sleek black leather boots that go with any outfit.",
+    "price": 9999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "013",
+    "name": "Green Polo Shirt",
+    "description": "A comfortable and stylish green polo shirt.",
+    "price": 2499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "014",
+    "name": "Brown Leather Belt",
+    "description": "A high-quality brown leather belt that will last for years.",
+    "price": 3999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "015",
+    "name": "Black Sunglasses",
+    "description": "Stylish black sunglasses with polarized lenses.",
+    "price": 2999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "016",
+    "name": "Red Backpack",
+    "description": "A sturdy and spacious red backpack with multiple pockets.",
+    "price": 4999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "017",
+    "name": "White Dress",
+    "description": "A beautiful white dress perfect for summer.",
+    "price": 6999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "018",
+    "name": "Black Leather Gloves",
+    "description": "Warm and stylish black leather gloves for cold weather.",
+    "price": 2499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "019",
+    "name": "Blue Running Shoes",
+    "description": "Comfortable and lightweight blue running shoes.",
+    "price": 7999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "020",
+    "name": "Silver Watch",
+    "description": "A sleek silver watch with a simple and elegant design.",
+    "price": 9999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "021",
+    "name": "Red Skirt",
+    "description": "A vibrant red skirt perfect for any occasion.",
+    "price": 3999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "022",
+    "name": "Black Dress Shoes",
+    "description": "Classic and stylish black dress shoes for any formal event.",
+    "price": 11999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "023",
+    "name": "Grey Wool Coat",
+    "description": "A warm and stylish grey wool coat for cold weather.",
+    "price": 14999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "024",
+    "name": "Brown Leather Messenger Bag",
+    "description": "A sturdy and stylish brown leather messenger bag.",
+    "price": 8999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "025",
+    "name": "White Sneakers with Red Accents",
+    "description": "Unique and stylish white sneakers with red accents.",
+    "price": 6999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "026",
+    "name": "Navy Blue Blouse",
+    "description": "A versatile and comfortable navy blue blouse.",
+    "price": 3499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "027",
+    "name": "Silver Necklace",
+    "description": "A delicate and elegant silver necklace.",
+    "price": 3999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "028",
+    "name": "Black Leather Backpack",
+    "description": "A spacious and durable black leather backpack.",
+    "price": 12999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "029",
+    "name": "Black Leather Jacket",
+    "description": "A timeless and stylish black leather jacket.",
+    "price": 19999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "030",
+    "name": "Grey Hoodie",
+    "description": "A comfortable and stylish grey hoodie with a kangaroo pocket.",
+    "price": 4499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "031",
+    "name": "Black Running Shorts",
+    "description": "Breathable and lightweight black running shorts.",
+    "price": 2499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "032",
+    "name": "Brown Leather Belt",
+    "description": "A classic and durable brown leather belt.",
+    "price": 2999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "033",
+    "name": "Blue Denim Jeans",
+    "description": "A timeless pair of blue denim jeans.",
+    "price": 5999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "034",
+    "name": "White T-shirt",
+    "description": "A simple and comfortable white t-shirt.",
+    "price": 1499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "035",
+    "name": "Black Leather Boots",
+    "description": "Stylish and durable black leather boots for any occasion.",
+    "price": 9999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "036",
+    "name": "Grey Wool Scarf",
+    "description": "A warm and cozy grey wool scarf.",
+    "price": 1999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "037",
+    "name": "Brown Leather Loafers",
+    "description": "Classic and stylish brown leather loafers for any occasion.",
+    "price": 8999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "038",
+    "name": "Black Leather Jacket",
+    "description": "A timeless and stylish black leather jacket.",
+    "price": 19999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "039",
+    "name": "Green Knit Sweater",
+    "description": "A cozy and stylish green knit sweater.",
+    "price": 4999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "040",
+    "name": "Red Hoodie",
+    "description": "A comfortable and stylish red hoodie with a kangaroo pocket.",
+    "price": 4499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "041",
+    "name": "Blue Polo Shirt",
+    "description": "A classic and comfortable blue polo shirt.",
+    "price": 2999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "042",
+    "name": "Grey Running Shoes",
+    "description": "Comfortable and lightweight grey running shoes.",
+    "price": 7999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "043",
+    "name": "Silver Bracelet",
+    "description": "A delicate and elegant silver bracelet.",
+    "price": 2999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "044",
+    "name": "Silver Earrings",
+    "description": "Stylish and elegant silver earrings.",
+    "price": 3999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "045",
+    "name": "Black Backpack",
+    "description": "A spacious and durable black backpack.",
+    "price": 6999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "046",
+    "name": "Red Leather Wallet",
+    "description": "A stylish and practical red leather wallet.",
+    "price": 4999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "047",
+    "name": "Grey Sweatpants",
+    "description": "Comfortable and stylish grey sweatpants.",
+    "price": 3499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "048",
+    "name": "Green Tea Leaves",
+    "description": "High-quality green tea leaves sourced from Japan.",
+    "price": 1499,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "049",
+    "name": "Waterproof Watch",
+    "description": "A sleek and durable waterproof watch for outdoor activities.",
+    "price": 8999,
+    "image": "/assets/tbr-logo.png"
+  },
+  {
+    "id": "050",
+    "name": "Blue Denim Jeans",
+    "description": "Classic and comfortable blue denim jeans.",
+    "price": 5999,
+    "image": "/assets/tbr-logo.png"
+  }
+]
