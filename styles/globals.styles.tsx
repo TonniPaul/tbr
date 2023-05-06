@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
   --logo-font : 'AmsterdamOne', sans-serif;
   --primary-font : "Play", sans-serif;
   --secondary-font :'Pacifico';
+  --transparent-bg : rgb(0, 0, 0, 0.5);
   --yellow : #E89B19;
   --black : #040505;
   --red : #dc2626;

@@ -11,7 +11,7 @@ export const ImageSliderContainer = styled.div`
   & > h1 {
     position: absolute;
     font-size: 2rem;
-    background: rgb(0, 0, 0, 0.5);
+    background: var(--transparent-bg);
     color: var(--white);
     bottom: 20px;
     right: 40px;
@@ -51,7 +51,7 @@ export const SliderButton = styled.button`
   color: white;
   cursor: pointer;
   transition: opacity 0.3s;
-  z-index: 3;
+  z-index: 2;
 
   &:hover {
     opacity: 0.7;

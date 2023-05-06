@@ -74,8 +74,21 @@ export const NavUl = styled.ul<NavUlProps>`
   transform: translateX(${({ number }) => number});
   transition: 0.4s ease-in-out;
   backdrop-filter: blur(20px);
-  z-index: 2;
+  z-index: 5;
 
+  &::before {
+    content: "";
+    background: rgb(0, 0, 0, 0.7);
+    width: 11vw;
+    height: 100vh;
+    position: absolute;
+    right: -12%;
+    backdrop-filter: blur(200px);
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
   @media (min-width: 768px) {
     position: relative;
     width: auto;
@@ -88,7 +101,6 @@ export const NavUl = styled.ul<NavUlProps>`
     margin: auto;
     transform: translateX(0);
   }
-
 `;
 
 export const NavLinksStyle = styled.li`
