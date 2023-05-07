@@ -51,7 +51,11 @@ button {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 2rem 0;
+
+    @media (min-width : 768px) {
+      padding: 4rem 0;
+    }
 }
 
 `;
