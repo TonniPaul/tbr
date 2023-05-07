@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   --primary-font : "Play", sans-serif;
   --secondary-font :'Pacifico';
   --transparent-bg : rgb(0, 0, 0, 0.5);
-  --yellow : #E89B19;
+  --yellow : #f9b42a;
   --black : #040505;
   --red : #dc2626;
   --white : #ffffff;
@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
 body {
   font-size: .8125rem;
   font-family: var(--primary-font);
+  scroll-behavior: smooth;
 
   @media (min-width : 768px) {
     font-size: 1rem;
@@ -47,6 +48,10 @@ button {
   background: inherit;
   border: none;
   cursor: pointer;
+}
+
+section {
+  padding: 4rem 0;
 }
 
 `;

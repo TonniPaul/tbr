@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const SectionCardStyle = styled.div`
-  padding: 4rem 0;
+export const SectionCardStyle = styled.section`
   max-width: 1440px;
   text-align: center;
 
