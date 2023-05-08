@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-
+import Image from "next/image";
 
 interface ImageSliderStyleProps {
   isCurrent: boolean;
@@ -48,7 +48,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
 `;
 
-export const SliderImages = styled.img<ImageSliderStyleProps>`
+export const SliderImages = styled(Image)<ImageSliderStyleProps>`
   position: absolute;
   top: 0;
   left: 0;
@@ -56,6 +56,16 @@ export const SliderImages = styled.img<ImageSliderStyleProps>`
   height: 100%;
   opacity: ${({ isCurrent }) => (isCurrent ? 1 : 0)};
   transition: 2s ease-in-out;
+`;
+
+export const SliderImageContainer = styled.div`
+  width: 100vw;
+  height: inherit;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const SliderButton = styled.button`
@@ -67,8 +77,8 @@ export const SliderButton = styled.button`
   cursor: pointer;
   transition: opacity 0.3s;
   z-index: 2;
-  filter: invert(99%) sepia(99%) saturate(5%) hue-rotate(99deg) brightness(101%)
-    contrast(104%);
+  filter: var(--white-filter);
+
   transform: translateY(-50%);
 
   &:hover {

@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
   --dark-grey : #5A5453;
   --light-grey : #f3f4f6;
   --border_radius_small: 5px;
+  --white-filter: invert(100%) sepia(6%) saturate(270%) hue-rotate(337deg) brightness(112%) contrast(100%);
 }
 
 *, *::after, *::before {

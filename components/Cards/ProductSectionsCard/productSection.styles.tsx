@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SectionCardStyle = styled.section`
   max-width: 1440px;
   text-align: center;
+  margin: auto;
 
   & > div {
     display: flex;

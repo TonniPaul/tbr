@@ -1,4 +1,5 @@
-import ImageSlider from "../ImageSlider/ImageSlider"
+import styled from "styled-components";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
 const images = [
   "/assets/thrift-1.avif",
@@ -6,12 +7,17 @@ const images = [
   "/assets/hanger.jpg",
 ];
 
+const HeroContainer = styled.div`
+  max-width: 1440px;
+  margin: auto;
+`;
+
 const Hero = () => {
   return (
-    <div>
+    <HeroContainer>
       <ImageSlider images={images} />
-    </div>
+    </HeroContainer>
   );
-}
+};
 
-export default Hero
+export default Hero;

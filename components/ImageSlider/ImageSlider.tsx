@@ -7,6 +7,7 @@ import {
   NextButton,
   SliderActiveButtons,
   Dots,
+  SliderImageContainer,
 } from "./imageSlider.styles";
 import Image from "next/image";
 
@@ -78,14 +79,18 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {images.map((imageUrl, index) => (
-            <SliderImages
-              key={imageUrl}
-              src={imageUrl}
-              alt={`Image ${index}`}
-              isCurrent={index === currentImageIndex}
-            />
-          ))}
+          <SliderImageContainer>
+            {images.map((imageUrl, index) => (
+              <SliderImages
+                key={imageUrl}
+                src={imageUrl}
+                alt={`Image ${index}`}
+                width={1023}
+                height={600}
+                isCurrent={index === currentImageIndex}
+              />
+            ))}
+          </SliderImageContainer>
         </ImageContainer>
         <h1>Shop Quality Thrift Wears, Bags and Accessories.</h1>
         <NextButton onClick={nextImage}>

@@ -6,9 +6,9 @@ interface NavUlProps  {
 }
 
 export const HeaderStyle = styled.header`
-   overflow: hidden;
+  overflow: hidden;
 
-  & > div {
+  & > div:first-child {
     display: flex;
     gap: 10px;
     background: var(--yellow);
@@ -18,19 +18,23 @@ export const HeaderStyle = styled.header`
     align-items: center;
     text-transform: uppercase;
   }
+`;
+
+export const NavContainer = styled.div`
+  background: var(--black);
 
   & nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--black);
     color: var(--white);
     padding: 0.5rem 1rem;
     position: relative;
+    max-width: 1440px;
+    margin: auto;
 
     & button img {
-      filter: invert(90%) sepia(99%) saturate(2%) hue-rotate(82deg)
-        brightness(108%) contrast(100%);
+      filter: var(--white-filter);
 
       @media (min-width: 768px) {
         display: none;
@@ -112,8 +116,7 @@ export const NavLinksStyle = styled.li`
   & a img {
     display: block;
     margin: 10px auto;
-    filter: invert(90%) sepia(99%) saturate(2%) hue-rotate(82deg)
-      brightness(108%) contrast(100%);
+    filter: var(--white-filter);
 
     @media (min-width: 768px) {
       display: none;
@@ -129,18 +132,17 @@ export const CartButton = styled.div`
     margin-right: 10px;
   }
   & a img {
-    filter: invert(90%) sepia(99%) saturate(2%) hue-rotate(82deg)
-      brightness(108%) contrast(100%);
+    filter: var(--white-filter);
   }
 
   & a p {
-   position: absolute;
-   background: var(--red);
-   padding: 0.2rem; 
-   border-radius: 50%;
-   top: -20px;
-   right: -10px;
-   font-size: 10px;
-   display: flex;
+    position: absolute;
+    background: var(--red);
+    padding: 0.2rem;
+    border-radius: 50%;
+    top: -20px;
+    right: -10px;
+    font-size: 10px;
+    display: flex;
   }
 `;

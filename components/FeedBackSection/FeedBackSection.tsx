@@ -7,14 +7,31 @@ const FeedBackSection = () => {
   return (
     <TestimonyContainer>
       <SectionHeaderText> FEEDBACKS AND REVIEWS</SectionHeaderText>
-      <h3>FEEDBACKS</h3>
       <div>
-        <Image
-          src="/assets/testimony1.jpg"
-          alt="feedbacks"
-          width={300}
-          height={500}
-        />
+        <div>
+          <Image
+            src="/assets/testimony1.jpg"
+            alt="feedbacks"
+            width={390}
+            height={390}
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/testimony8.jpg"
+            alt="feedbacks"
+            width={390}
+            height={390}
+          />
+        </div>
+        <div>
+          <Image
+            src="/assets/testimony4.jpg"
+            alt="feedbacks"
+            width={390}
+            height={390}
+          />
+        </div>
       </div>
     </TestimonyContainer>
   );
