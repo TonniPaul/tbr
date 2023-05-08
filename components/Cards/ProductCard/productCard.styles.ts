@@ -47,16 +47,3 @@ export const ProductPriceStyle = styled.div`
     font-weight: 900;
   }
 `;
-
-export const AddToCartButtonStyle = styled.button`
-  background: var(--yellow);
-  padding: 0.5rem 2rem;
-  border-radius: var(--border_radius_small);
-  color: var(--white);
-
-  transition: background var(--short-transition);
-
-  &:hover {
-    background: var(--hover-yellow);
-  }
-`;
