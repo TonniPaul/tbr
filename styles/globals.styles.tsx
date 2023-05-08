@@ -12,7 +12,7 @@ export const SectionHeaderText = styled.p`
 
 export const ActionButtonStyle = styled.button`
   background: var(--yellow);
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0.8rem;
   border-radius: var(--border_radius_small);
   color: var(--white);
   transition: background var(--short-transition);
@@ -21,6 +21,10 @@ export const ActionButtonStyle = styled.button`
   &:hover {
     background: var(--white);
     color: var(--yellow);
+  }
+
+  @media (min-width: 768px) {
+    padding: 0.5rem 2rem;
   }
 `;
 

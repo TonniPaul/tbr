@@ -19,16 +19,33 @@ const CartPage = () => {
           <CartItems>
             <CartImageContainer>
               <Image
-                src="/assets/logo-yello.png"
+                src="/assets/Logo-yello.png"
                 alt="product-image"
                 width={300}
                 height={300}
               />
             </CartImageContainer>
             <CartItemsData>
-              <p>Ankara Top</p>
+              <p> Nike Flower Top </p>
               <p>
                 <CurrencyStyle>NGN</CurrencyStyle> 5,000
+              </p>
+              <ActionButtonStyle>Remove From Cart</ActionButtonStyle>
+            </CartItemsData>
+          </CartItems>
+          <CartItems>
+            <CartImageContainer>
+              <Image
+                src="/assets/Logo-yello.png"
+                alt="product-image"
+                width={300}
+                height={300}
+              />
+            </CartImageContainer>
+            <CartItemsData>
+              <p>Fendi Crop Top</p>
+              <p>
+                <CurrencyStyle>NGN</CurrencyStyle> 9,999
               </p>
               <ActionButtonStyle>Remove From Cart</ActionButtonStyle>
             </CartItemsData>

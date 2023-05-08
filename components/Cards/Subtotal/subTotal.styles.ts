@@ -8,19 +8,23 @@ export const SubTotalContainer = styled.div`
   height: max-content;
 
   & p {
-    font-size: 1.0625rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;
   }
 
   & button {
     width: 100%;
-    padding: 1rem;
     border: 1px solid var(--yellow);
-    font-size: 1rem;
-  }
 
-  @media (min-width: 768px) {
-    width: 30%;
+    @media (min-width: 600px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+  @media (min-width: 600px) {
+    width: 40%;
     margin: 0;
+  }
+  @media (min-width: 768px) {
+    flex-basis: 30%;
   }
 `;
