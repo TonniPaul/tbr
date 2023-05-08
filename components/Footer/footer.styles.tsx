@@ -3,12 +3,11 @@ import styled from "styled-components";
 export const FooterStyles = styled.footer`
   background: var(--black);
   color: var(--white);
-  padding: 2rem 0;
+  padding: 2rem;
 
   & > div {
     max-width: 1440px;
     margin: auto;
-    padding: 0 2rem;
 
     @media (min-width: 768px) {
       display: flex;
@@ -65,12 +64,15 @@ export const FooterSections = styled.div`
 `;
 
 export const CopyRightSection = styled.div`
+  width: 100%;
+  border-top: 1px solid var(--dark-grey);
+  margin-top: 2rem !important;
+  text-align: center !important;
+
   & a {
     display: block;
-    border-top: 1px solid var(--light-grey);
     padding-top: 1rem;
-    width: 100%;
-    margin-top: 2rem;
-    text-align: center;
+    width: max-content;
+    margin: auto;
   }
 `;
