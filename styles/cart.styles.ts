@@ -29,11 +29,6 @@ export const CartItemsContainer = styled.div`
     font-size: 17px;
     font-weight: 700;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--light-grey);
-  }
-
-  & > div {
-    padding: 2rem 0;
   }
 `;
 
@@ -41,7 +36,7 @@ export const CartItems = styled.div`
   display: flex;
   gap: 20px;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--light-grey);
+  border-top: 3px solid var(--light-grey);
 `;
 
 export const CartImageContainer = styled.div`
@@ -94,5 +89,18 @@ export const CartItemsData = styled.div`
     @media (min-width: 768px) {
       padding: 0.5rem 2rem;
     }
+  }
+`;
+
+export const EmptyCartStyle = styled.div`
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--border_radius_small);
+
+  & p {
+    font-size: 17px;
+    padding: 1rem;
   }
 `;

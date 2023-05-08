@@ -28,6 +28,6 @@ export const ActionButtonStyle = styled.button`
   }
 `;
 
-export const CurrencyStyle = styled.span`
+export const BoldText = styled.span`
   font-weight: 700;
 `;

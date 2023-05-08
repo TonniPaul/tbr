@@ -4,10 +4,54 @@ export const FooterStyles = styled.footer`
   background: var(--black);
   color: var(--white);
   padding: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "Thrifts By Ronn";
+    position: absolute;
+    font-size: 30px;
+    color: var(--white);
+    opacity: 0.01999;
+    width: max-content;
+    font-family: var(--logo-font);
+  }
+  &::before {
+    top: 0px;
+    left: 50px;
+    transform: rotate(-20deg) translateX(50%) translateY(80%);
+  }
+  &::after {
+    bottom: 100px;
+    right: 50px;
+    transform: rotate(-20deg) translateX(-50%) translateY(50%);
+  }
 
   & > div {
     max-width: 1440px;
     margin: auto;
+
+    &::before,
+    &::after {
+      content: "Thrifts By Ronn";
+      position: absolute;
+      font-size: 30px;
+      color: var(--white);
+      opacity: 0.01999;
+      width: max-content;
+      font-family: var(--logo-font);
+    }
+    &::before {
+      bottom: 50%;
+      right: 50%;
+      transform: rotate(-40deg);
+    }
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform: rotate(-40deg);
+    }
 
     @media (min-width: 768px) {
       display: flex;

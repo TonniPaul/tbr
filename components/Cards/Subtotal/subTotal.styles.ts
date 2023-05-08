@@ -10,6 +10,8 @@ export const SubTotalContainer = styled.div`
   & p {
     font-size: 0.9rem;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 
   & button {
@@ -26,5 +28,17 @@ export const SubTotalContainer = styled.div`
   }
   @media (min-width: 768px) {
     flex-basis: 30%;
+  }
+`;
+
+export const GrandTotal = styled.p`
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 1rem; */
+  padding-top: 0.5rem;
+  border-top: 2px solid var(--white);
+
+  & span:first-child {
+    font-weight: 700;
   }
 `;

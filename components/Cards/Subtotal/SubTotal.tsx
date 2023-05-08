@@ -1,20 +1,41 @@
-import { ActionButtonStyle, CurrencyStyle } from "@/styles/globals.styles";
-import { SubTotalContainer } from "./subTotal.styles";
+import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
+import { GrandTotal, SubTotalContainer } from "./subTotal.styles";
 import { useState } from "react";
 
 const SubTotal = () => {
-  const [itemCount, swtItemCOunt] = useState<number>(3);
+  const [itemCount, swtItemCOunt] = useState<number>(2);
+  const amount = 14999;
+  const discount = (amount / 100) * 5;
 
   return (
     <SubTotalContainer>
       <p>
-        Subtotal{" "}
         <span>
-          ({itemCount} {itemCount > 1 ? "items" : "item"} )
+          Subtotal
+          <span>
+            {" "}
+            (<BoldText>{itemCount}</BoldText> {itemCount > 1 ? "items" : "item"}{" "}
+            ):
+          </span>
         </span>
-        : <CurrencyStyle>NGN </CurrencyStyle> 5000
+        <span>
+          <BoldText>NGN </BoldText> {amount.toLocaleString()}
+        </span>
       </p>
-      <p></p>
+      <p>
+        <span> Discount (5% off):</span>
+        <span>
+          <BoldText>NGN </BoldText> {discount.toLocaleString()}
+        </span>
+      </p>
+
+      <GrandTotal>
+        <span> Grand Total:</span>
+        <span>
+          <BoldText>NGN </BoldText>
+          {(amount - discount).toLocaleString()}{" "}
+        </span>
+      </GrandTotal>
       <ActionButtonStyle>Proceed to Checkout</ActionButtonStyle>
     </SubTotalContainer>
   );

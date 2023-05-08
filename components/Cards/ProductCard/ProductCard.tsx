@@ -6,7 +6,7 @@ import {
   ProductTitleStyle,
 } from "./productCard.styles";
 import productImage from "../../../public/assets/Logo-yello.png";
-import { ActionButtonStyle, CurrencyStyle } from "@/styles/globals.styles";
+import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
 
 const ProductCard = () => {
   return (
@@ -22,7 +22,7 @@ const ProductCard = () => {
         </ProductCardImageContainer>
         <ProductTitleStyle> GUCCI BAG</ProductTitleStyle>
         <ProductPriceStyle>
-          <CurrencyStyle>NGN</CurrencyStyle>
+          <BoldText>NGN</BoldText>
           8500
         </ProductPriceStyle>
         <ActionButtonStyle>Add to Cart</ActionButtonStyle>
