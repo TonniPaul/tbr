@@ -4,10 +4,6 @@ export const SectionCardStyle = styled.section`
   max-width: 1440px;
   text-align: center;
 
-  & h3 {
-    padding: 1rem;
-  }
-
   & > div {
     display: flex;
     justify-content: center;

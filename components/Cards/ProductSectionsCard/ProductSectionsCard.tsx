@@ -1,10 +1,11 @@
+import { SectionHeaderText } from "@/styles/globals.styles";
 import ProductCard from "../ProductCard/ProductCard";
 import { SectionCardStyle } from "./productSection.styles";
 
 const ProductSectionsCard = () => {
   return (
     <SectionCardStyle>
-      <h3>NEW ARRIVAL</h3>
+      <SectionHeaderText>NEW ARRIVAL</SectionHeaderText>
       <div>
         <ProductCard />
         <ProductCard />

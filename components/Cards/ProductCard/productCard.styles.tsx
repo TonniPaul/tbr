@@ -16,6 +16,23 @@ export const ProductCardContainerStyle = styled.div`
   }
 `;
 
+export const ProductCardImageContainer = styled.div`
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+`; 
+
 export const ProductTitleStyle = styled.p`
   font-weight: 900;
   font-size: 1rem;
