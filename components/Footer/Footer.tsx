@@ -54,16 +54,17 @@ const Footer = () => {
           <p>Information</p>
           <div>
             <Link href="/about">About</Link>
-            <Link href="contact">Contact</Link>
+            <Link href="/contact">Return Policy</Link>
           </div>
         </FooterSections>
         <FooterSections>
           <p>Contact Us</p>
           <div>
             <a href="#">Chat on WhatsApp</a>
-            <a href="#">Shoes</a>
-            <a href="#">Gown</a>
-            <a href="#">Shirts</a>
+            <a href="https://instagram.com/thriftsbyronn?igshid=NTc4MTIwNjQ2YQ==">
+              Instagram
+            </a>
+            <a href="https://twitter.com/thriftsbyronn">Twitter</a>
           </div>
         </FooterSections>
       </div>
