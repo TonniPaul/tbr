@@ -6,7 +6,9 @@ import { SectionHeaderText } from "@/styles/globals.styles";
 const FeedBackSection = () => {
   return (
     <TestimonyContainer>
-      <SectionHeaderText> FEEDBACKS AND REVIEWS</SectionHeaderText>
+      <SectionHeaderText>
+        {"Here's is what people are are saying about us..."}
+      </SectionHeaderText>
       <div>
         <div>
           <Image
