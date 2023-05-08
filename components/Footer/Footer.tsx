@@ -14,11 +14,7 @@ const Footer = () => {
       <div>
         <TBRDataSection>
           <Image src="/assets/logo.png" alt="tbr-logo" width={70} height={70} />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-            nihil omnis cum aliquam ad asperiores voluptatum voluptates vel
-            reiciendis dolor unde explicabo.
-          </p>
+          <p>Shop smart, save more with Thrifts By Ronn.</p>
 
           <SocialLinksContainer>
             <a href="https://twitter.com/thriftsbyronn">

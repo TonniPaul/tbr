@@ -11,6 +11,13 @@ export const LoaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--short-transition);
+  overflow: hidden;
+
+  & p {
+    font-style: italic;
+    padding: 1rem;
+  }
 `;
 
 export const InfiniteRotate = styled.div`
@@ -19,5 +26,6 @@ export const InfiniteRotate = styled.div`
   background: var(--yellow);
   border-radius: 50%;
   padding: 0.5rem;
+  margin: auto;
 `;
 

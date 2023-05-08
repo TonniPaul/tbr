@@ -6,6 +6,7 @@ export const SubTotalContainer = styled.div`
   border-radius: var(--border_radius_small);
   margin: 1rem auto;
   height: max-content;
+  box-shadow: var(--box_shadow);
 
   & p {
     font-size: 0.9rem;
@@ -34,7 +35,6 @@ export const SubTotalContainer = styled.div`
 export const GrandTotal = styled.p`
   display: flex;
   justify-content: space-between;
-  /* margin-top: 1rem; */
   padding-top: 0.5rem;
   border-top: 2px solid var(--white);
 

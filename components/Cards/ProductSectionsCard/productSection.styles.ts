@@ -11,15 +11,10 @@ export const SectionCardStyle = styled.section`
     flex-wrap: wrap;
     column-gap: 10px;
     row-gap: 20px;
-    padding: 1rem;
+    /* padding: 1rem; */
 
     @media (min-width: 768px) {
       gap: 20px;
     }
-  }
-
-  @media (min-width: 768px) {
-    width: 100%;
-    padding: 100px 2rem;
   }
 `;
