@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const SectionHeaderText = styled.p`
   font-size: 17px;
@@ -30,4 +30,8 @@ export const ActionButtonStyle = styled.button`
 
 export const BoldText = styled.span`
   font-weight: 700;
+`;
+
+export const bounce = keyframes`
+  50% {transform : translateY(-20px);}
 `;

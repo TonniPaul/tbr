@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
   --light-grey : #f3f4f6;
   --border_radius_small: 5px;
   --short-transition: 0.5s ease-in-out;
+  --box_shadow: 0px 2px 5px rgba(99,99,99,.4);
   --white-filter: invert(100%) sepia(6%) saturate(270%) hue-rotate(337deg) brightness(112%) contrast(100%);
 }
 
@@ -36,6 +37,20 @@ body {
   font-family: var(--primary-font);
   scroll-behavior: smooth;
   font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+  }
 
   @media (min-width : 768px) {
     font-size: 1rem;
@@ -57,11 +72,7 @@ button {
 }
 
 section {
-  padding: 2rem 0;
-
-    @media (min-width : 768px) {
-      padding: 4rem 0;
-    }
+  padding: 2rem 0 5rem;
 }
 
 `;
