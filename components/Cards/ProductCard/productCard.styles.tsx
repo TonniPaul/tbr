@@ -5,6 +5,7 @@ export const ProductCardContainerStyle = styled.div`
   text-align: center;
   border: 3px solid var(--light-grey);
   border-radius: var(--border_radius_small);
+  overflow: hidden;
 
   & * {
     padding-bottom: 10px;
@@ -18,19 +19,22 @@ export const ProductCardContainerStyle = styled.div`
 export const ProductCardImageContainer = styled.div`
   width: 140px;
   height: 140px;
-  overflow: hidden;
 
   & img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1/1;
+    transition: scale var(--short-transition);
+
+    &:hover {
+      scale: 1.1;
+    }
   }
 
   @media (min-width: 768px) {
     width: 200px;
     height: 200px;
   }
-`; 
+`;
 
 export const ProductTitleStyle = styled.p`
   font-weight: 900;
@@ -49,4 +53,10 @@ export const AddToCartButtonStyle = styled.button`
   padding: 0.5rem 2rem;
   border-radius: var(--border_radius_small);
   color: var(--white);
+
+  transition: background var(--short-transition);
+
+  &:hover {
+    background: var(--hover-yellow);
+  }
 `;

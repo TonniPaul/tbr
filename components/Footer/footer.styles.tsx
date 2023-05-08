@@ -8,6 +8,7 @@ export const FooterStyles = styled.footer`
   & > div {
     max-width: 1440px;
     margin: auto;
+    padding: 0 2rem;
 
     @media (min-width: 768px) {
       display: flex;
@@ -31,10 +32,6 @@ export const SocialLinksContainer = styled.div`
   display: flex;
   gap: 10px;
 
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-
   & > a {
     filter: var(--white-filter);
 
@@ -53,7 +50,7 @@ export const FooterSections = styled.div`
     font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 10px 0;
+    padding: 20px 0 10px;
 
     @media (min-width: 768px) {
       padding-top: 0;
@@ -63,11 +60,13 @@ export const FooterSections = styled.div`
   & div a {
     display: block;
     padding: 5px 0;
+    text-transform: capitalize;
   }
 `;
 
 export const CopyRightSection = styled.div`
   & a {
+    display: block;
     border-top: 1px solid var(--light-grey);
     padding-top: 1rem;
     width: 100%;

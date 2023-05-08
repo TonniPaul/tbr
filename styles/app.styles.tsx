@@ -12,12 +12,14 @@ const GlobalStyles = createGlobalStyle`
   --secondary-font :'Pacifico';
   --transparent-bg : rgb(0, 0, 0, 0.5);
   --yellow : #f9b42a;
+  --hover-yellow : #ac7c1d;
   --black : #040505;
   --red : #dc2626;
   --white : #ffffff;
   --dark-grey : #5A5453;
   --light-grey : #f3f4f6;
   --border_radius_small: 5px;
+  --short-transition: 0.5s ease-in-out;
   --white-filter: invert(100%) sepia(6%) saturate(270%) hue-rotate(337deg) brightness(112%) contrast(100%);
 }
 
@@ -33,6 +35,7 @@ body {
   font-size: .8125rem;
   font-family: var(--primary-font);
   scroll-behavior: smooth;
+  font-weight: 400;
 
   @media (min-width : 768px) {
     font-size: 1rem;
