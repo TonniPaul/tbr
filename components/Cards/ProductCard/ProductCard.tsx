@@ -16,8 +16,8 @@ const ProductCard = () => {
           <Image
             src={productImage}
             alt="product-image"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
           />
         </ProductCardImageContainer>
         <ProductTitleStyle> GUCCI BAG</ProductTitleStyle>

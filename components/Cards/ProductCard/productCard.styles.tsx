@@ -5,7 +5,6 @@ export const ProductCardContainerStyle = styled.div`
   text-align: center;
   border: 3px solid var(--light-grey);
   border-radius: var(--border_radius_small);
-  max-width: 220px;
 
   & * {
     padding-bottom: 10px;
@@ -17,8 +16,8 @@ export const ProductCardContainerStyle = styled.div`
 `;
 
 export const ProductCardImageContainer = styled.div`
-  width: 100%;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   overflow: hidden;
 
   & img {
