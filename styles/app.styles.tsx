@@ -52,6 +52,8 @@ button {
   background: inherit;
   border: none;
   cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 section {

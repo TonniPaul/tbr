@@ -1,12 +1,12 @@
 import Image from "next/image";
 import {
-  AddToCartButtonStyle,
   ProductCardContainerStyle,
   ProductCardImageContainer,
   ProductPriceStyle,
   ProductTitleStyle,
 } from "./productCard.styles";
 import productImage from "../../../public/assets/Logo-yello.png";
+import { ActionButtonStyle, CurrencyStyle } from "@/styles/globals.styles";
 
 const ProductCard = () => {
   return (
@@ -22,9 +22,10 @@ const ProductCard = () => {
         </ProductCardImageContainer>
         <ProductTitleStyle> GUCCI BAG</ProductTitleStyle>
         <ProductPriceStyle>
-          <span>NGN</span> 8500
+          <CurrencyStyle>NGN</CurrencyStyle>
+          8500
         </ProductPriceStyle>
-        <AddToCartButtonStyle> Add to Cart </AddToCartButtonStyle>
+        <ActionButtonStyle>Add to Cart</ActionButtonStyle>
       </ProductCardContainerStyle>
     </div>
   );
