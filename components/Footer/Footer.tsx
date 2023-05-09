@@ -14,28 +14,7 @@ const Footer = () => {
       <div>
         <TBRDataSection>
           <Image src="/assets/logo.png" alt="tbr-logo" width={70} height={70} />
-          <p>Shop smart, save more with Thrifts By Ronn.</p>
-
-          <SocialLinksContainer>
-            <a href="https://twitter.com/thriftsbyronn">
-              <div>
-                <Image
-                  src="/assets/twitter-sign.png"
-                  alt="twitter-logo"
-                  width={20}
-                  height={20}
-                />
-              </div>
-            </a>
-            <a href="https://instagram.com/thriftsbyronn?igshid=NTc4MTIwNjQ2YQ==">
-              <Image
-                src="/assets/instagram.png"
-                alt="twitter-logo"
-                width={20}
-                height={20}
-              />
-            </a>
-          </SocialLinksContainer>
+          <p>With us, you can afford everything.</p>
         </TBRDataSection>
         <FooterSections>
           <p>Shop by category</p>
@@ -55,13 +34,34 @@ const Footer = () => {
         </FooterSections>
         <FooterSections>
           <p>Contact Us</p>
-          <div>
-            <a href="#">Chat on WhatsApp</a>
-            <a href="https://instagram.com/thriftsbyronn?igshid=NTc4MTIwNjQ2YQ==">
-              Instagram
+          <SocialLinksContainer>
+            <a href="https://twitter.com/thriftsbyronn">
+              <div>
+                <Image
+                  src="/assets/twitter-sign.png"
+                  alt="twitter-logo"
+                  width={20}
+                  height={20}
+                />
+              </div>
             </a>
-            <a href="https://twitter.com/thriftsbyronn">Twitter</a>
-          </div>
+            <a href="https://instagram.com/thriftsbyronn?igshid=NTc4MTIwNjQ2YQ==">
+              <Image
+                src="/assets/instagram.png"
+                alt="twitter-logo"
+                width={20}
+                height={20}
+              />
+            </a>
+            <a href="https://wa.link/uvusr4">
+              <Image
+                src="/assets/whatsapp1.png"
+                alt="twitter-logo"
+                width={20}
+                height={20}
+              />
+            </a>
+          </SocialLinksContainer>
         </FooterSections>
       </div>
       <CopyRightSection>

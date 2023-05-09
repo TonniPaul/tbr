@@ -5,25 +5,19 @@ import {
   ProductPriceStyle,
   ProductTitleStyle,
 } from "./productCard.styles";
-import productImage from "../../../public/assets/Logo-yello.png";
 import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
+import { ProductCardProps } from "@/interface/ProductCardProps";
 
-const ProductCard = () => {
+const ProductCard = ({ image, title, price }: ProductCardProps) => {
   return (
     <div>
       <ProductCardContainerStyle>
         <ProductCardImageContainer>
-          <Image
-            src={productImage}
-            alt="product-image"
-            width={250}
-            height={250}
-          />
+          <Image src={image} alt={`${title} image`} width={250} height={250} />
         </ProductCardImageContainer>
-        <ProductTitleStyle> GUCCI BAG</ProductTitleStyle>
+        <ProductTitleStyle>{title} </ProductTitleStyle>
         <ProductPriceStyle>
-          <BoldText>NGN</BoldText>
-          8500
+          <BoldText>NGN</BoldText> {price}
         </ProductPriceStyle>
         <ActionButtonStyle>Add to Cart</ActionButtonStyle>
       </ProductCardContainerStyle>

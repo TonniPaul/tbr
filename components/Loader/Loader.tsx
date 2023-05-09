@@ -8,7 +8,7 @@ const Loader = () => {
         <InfiniteRotate>
           <Image src="/assets/tbr-sm.png" alt="logo" width={100} height={100} />
         </InfiniteRotate>
-        <p>Shop smart, save more with Thrifts By Ronn.</p>
+        <p>With us, you can afford everything</p>
       </div>
     </LoaderContainer>
   );

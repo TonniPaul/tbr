@@ -7,7 +7,7 @@ const FeedBackSection = () => {
   return (
     <TestimonyContainer>
       <SectionHeaderText>
-        {"Here's is what people are are saying about us..."}
+        {"Here's what people are are saying about us..."}
       </SectionHeaderText>
       <div>
         <div>

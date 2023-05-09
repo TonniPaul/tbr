@@ -41,7 +41,7 @@ body {
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
-    width: 7px;
+    width: 1px;
   }
 
   &::-webkit-scrollbar-track {

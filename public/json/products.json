@@ -73,7 +73,7 @@
     "id": "011",
     "name": "Blue Button-Up Shirt",
     "description": "A classic blue button-up shirt made from high-quality cotton.",
-    "price": 2999,
+    "price": 8999,
     "image": "/assets/tbr-logo.png"
   },
   {
@@ -87,7 +87,7 @@
     "id": "013",
     "name": "Green Polo Shirt",
     "description": "A comfortable and stylish green polo shirt.",
-    "price": 2499,
+    "price": 5499,
     "image": "/assets/tbr-logo.png"
   },
   {
@@ -101,7 +101,7 @@
     "id": "015",
     "name": "Black Sunglasses",
     "description": "Stylish black sunglasses with polarized lenses.",
-    "price": 2999,
+    "price": 7999,
     "image": "/assets/tbr-logo.png"
   },
   {
@@ -122,7 +122,7 @@
     "id": "018",
     "name": "Black Leather Gloves",
     "description": "Warm and stylish black leather gloves for cold weather.",
-    "price": 2499,
+    "price": 6499,
     "image": "/assets/tbr-logo.png"
   },
   {
@@ -332,7 +332,7 @@
     "id": "048",
     "name": "Green Tea Leaves",
     "description": "High-quality green tea leaves sourced from Japan.",
-    "price": 1499,
+    "price": 7499,
     "image": "/assets/tbr-logo.png"
   },
   {
@@ -346,7 +346,7 @@
     "id": "050",
     "name": "Blue Denim Jeans",
     "description": "Classic and comfortable blue denim jeans.",
-    "price": 5999,
+    "price": 9999,
     "image": "/assets/tbr-logo.png"
   }
 ]
