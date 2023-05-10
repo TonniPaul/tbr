@@ -65,10 +65,14 @@ export const CartImageContainer = styled.div`
 
 export const CartItemsData = styled.div`
   align-self: flex-end;
-  margin-bottom: 0.5rem;
+
+  & > * {
+    margin-bottom: 0.5rem;
+  }
 
   & p {
     padding: 0.2rem 0;
+    margin: 0 !important;
   }
 
   & > p:first-child {
@@ -76,9 +80,7 @@ export const CartItemsData = styled.div`
     text-transform: capitalize;
   }
 
-  & button {
-    margin-top: 0.5rem;
-
+  & > button {
     @media (min-width: 768px) {
       padding: 0.5rem 2rem;
     }

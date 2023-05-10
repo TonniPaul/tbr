@@ -3,8 +3,8 @@ import { GrandTotal, SubTotalContainer } from "./subTotal.styles";
 import { useState } from "react";
 
 const SubTotal = () => {
-  const [itemCount, swtItemCOunt] = useState<number>(2);
-  const amount = 4800 + 4500;
+  const [itemCount, swtItemCOunt] = useState<number>(1);
+  const amount = 4800;
   const discount = (amount / 100) * 5;
 
   return (

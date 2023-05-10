@@ -12,7 +12,7 @@ const FeedBackSection = () => {
       <div>
         <div>
           <Image
-            src="/assets/testimony1.jpg"
+            src="/assets/reviews/testimony1.jpg"
             alt="feedbacks"
             width={390}
             height={390}
@@ -20,7 +20,7 @@ const FeedBackSection = () => {
         </div>
         <div>
           <Image
-            src="/assets/testimony8.jpg"
+            src="/assets/reviews/testimony8.jpg"
             alt="feedbacks"
             width={390}
             height={390}
@@ -28,7 +28,7 @@ const FeedBackSection = () => {
         </div>
         <div>
           <Image
-            src="/assets/testimony4.jpg"
+            src="/assets/reviews/testimony4.jpg"
             alt="feedbacks"
             width={390}
             height={390}

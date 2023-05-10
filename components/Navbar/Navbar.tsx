@@ -78,7 +78,7 @@ const Navbar = () => {
                 width={20}
                 height={20}
               />
-              <p>2</p>
+              <p>1</p>
             </Link>
           </CartButton>
         </nav>

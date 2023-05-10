@@ -13,7 +13,7 @@ export const FooterStyles = styled.footer`
     position: absolute;
     font-size: 30px;
     color: var(--white);
-    opacity: 0.08;
+    opacity: 0.03;
     width: max-content;
     font-family: var(--logo-font);
   }
@@ -38,7 +38,7 @@ export const FooterStyles = styled.footer`
       position: absolute;
       font-size: 30px;
       color: var(--white);
-      opacity: 0.08;
+      opacity: 0.03;
       width: max-content;
       font-family: var(--logo-font);
     }

@@ -6,6 +6,7 @@ export const ProductCardContainerStyle = styled.div`
   border: 3px solid var(--light-grey);
   border-radius: var(--border_radius_small);
   overflow: hidden;
+  cursor: pointer;
 
   & * {
     padding-bottom: 10px;

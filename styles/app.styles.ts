@@ -72,6 +72,10 @@ button {
   font-size: inherit;
 }
 
+  button:disabled {
+    cursor: not-allowed !important;
+  }
+
 section {
   padding: 2rem 0 5rem;
 }
