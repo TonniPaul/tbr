@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import linkData from "../../public/json/navlinks.json";
 import {
   HeaderStyle,
@@ -18,6 +18,14 @@ const Navbar = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   const handleClose = () => setIsOpen(false);
   return (
