@@ -1,3 +1,4 @@
+import Count from "@/components/Cards/CountComponent/Count";
 import SubTotal from "@/components/Cards/Subtotal/SubTotal";
 import {
   CartImageContainer,
@@ -50,6 +51,7 @@ const CartPage = () => {
                 <p>
                   <BoldText>NGN</BoldText> 4,800
                 </p>
+                <Count />
 
                 {!isRemoving && (
                   <ActionButtonStyle onClick={handleRemoveClick}>
@@ -72,23 +74,6 @@ const CartPage = () => {
                     </ActionButtonStyle>
                   </ConfirmRemoveContainer>
                 )}
-              </CartItemsData>
-            </CartItems>
-            <CartItems>
-              <CartImageContainer>
-                <Image
-                  src="/assets/product3.jpg"
-                  alt="product-image"
-                  width={300}
-                  height={300}
-                />
-              </CartImageContainer>
-              <CartItemsData>
-                <p>Animal Skin Top</p>
-                <p>
-                  <BoldText>NGN</BoldText> 4500
-                </p>
-                <ActionButtonStyle>Remove From Cart</ActionButtonStyle>
               </CartItemsData>
             </CartItems>
           </div>
