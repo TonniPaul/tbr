@@ -10,17 +10,17 @@ export const SectionHeaderText = styled.p`
   }
 `;
 
-export const ActionButtonStyle = styled.button`
-  background: var(--yellow);
+export const ActionButtonStyle = styled.button<{ color?: string }>`
+  background: ${({ color }) => (color ? color : "var(--yellow)")};
   padding: 0.5rem 0.8rem;
   border-radius: var(--border_radius_small);
   color: var(--white);
   transition: background var(--short-transition);
-  border: 1px solid var(--yellow);
+  border: 1px solid ${({ color }) => (color ? color : "var(--yellow)")};
 
   &:hover {
     background: var(--white);
-    color: var(--yellow);
+    color: ${({ color }) => (color ? color : "var(--yellow)")};
   }
 
   @media (min-width: 768px) {

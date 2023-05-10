@@ -17,7 +17,7 @@ const ProductCard = ({ image, title, price }: ProductCardProps) => {
         </ProductCardImageContainer>
         <ProductTitleStyle>{title} </ProductTitleStyle>
         <ProductPriceStyle>
-          <BoldText>NGN</BoldText> {price}
+          <BoldText>NGN</BoldText> {price.toLocaleString()}
         </ProductPriceStyle>
         <ActionButtonStyle>Add to Cart</ActionButtonStyle>
       </ProductCardContainerStyle>

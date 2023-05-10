@@ -2,8 +2,12 @@ import ProductSectionsCard from "@/components/Cards/ProductSectionsCard/ProductS
 import Hero from "@/components/Hero/Hero";
 import FeedBackSection from "@/components/FeedBackSection/FeedBackSection";
 import Head from "next/head";
+import productsData from "../public/json/products.json";
+import { useState } from "react";
+import { MyProductProps } from "@/interface/ProductsProps";
 
 export default function Home() {
+  const [myProduct, setMyProduct] = useState<MyProductProps[]>(productsData);
   return (
     <>
       <Head>

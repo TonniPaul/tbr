@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
-import ScrollToTop from "@/components/ScollToTop/ScollToTop";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 import GlobalStyles from "@/styles/app.styles";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";

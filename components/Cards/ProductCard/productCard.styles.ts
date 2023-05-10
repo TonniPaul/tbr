@@ -38,8 +38,24 @@ export const ProductCardImageContainer = styled.div`
 
 export const ProductTitleStyle = styled.p`
   font-weight: 900;
-  font-size: 1rem;
   text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 140px;
+  margin: auto;
+
+  &:hover {
+    white-space: normal;
+
+    &::-webkit-scrollbar {
+      height: 1px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
 `;
 
 export const ProductPriceStyle = styled.div`
