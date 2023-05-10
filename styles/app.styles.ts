@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
   --secondary-font :'Pacifico';
   --transparent-bg : rgb(0, 0, 0, 0.5);
   --yellow : #f9b42a;
+  --green : #0d560d;
   --hover-yellow : #ac7c1d;
   --black : #040505;
   --red : #dc2626;

@@ -18,21 +18,17 @@ const SubTotal = () => {
             ):
           </span>
         </span>
-        <span>
-          <BoldText>NGN </BoldText> {amount.toLocaleString()}
-        </span>
+        <span>NGN {amount.toLocaleString()}</span>
       </p>
       <p>
         <span> Discount (5% off):</span>
-        <span>
-          <BoldText>NGN </BoldText> {discount.toLocaleString()}
-        </span>
+        <span>NGN {discount.toLocaleString()}</span>
       </p>
 
       <GrandTotal>
         <span> Grand Total:</span>
         <span>
-          <BoldText>NGN </BoldText>
+          NGN
           {(amount - discount).toLocaleString()}{" "}
         </span>
       </GrandTotal>

@@ -5,14 +5,29 @@ import {
   CartItemsContainer,
   CartItemsData,
   CartMainContainer,
+  ConfirmRemoveContainer,
   EmptyCartStyle,
 } from "@/styles/cart.styles";
 import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const CartPage = () => {
+  const [isRemoving, setIsRemoving] = useState<boolean>(false);
   const items = 2;
+
+  const handleRemoveClick = () => {
+    setIsRemoving(true);
+  };
+
+  const handleCancelClick = () => {
+    setIsRemoving(false);
+  };
+
+  const handleConfirmClick = () => {
+    setIsRemoving(false);
+  };
 
   return (
     <CartMainContainer>
@@ -35,7 +50,28 @@ const CartPage = () => {
                 <p>
                   <BoldText>NGN</BoldText> 4,800
                 </p>
-                <ActionButtonStyle>Remove From Cart</ActionButtonStyle>
+
+                {!isRemoving && (
+                  <ActionButtonStyle onClick={handleRemoveClick}>
+                    Remove From Cart
+                  </ActionButtonStyle>
+                )}
+                {isRemoving && (
+                  <ConfirmRemoveContainer>
+                    <ActionButtonStyle
+                      color="var(--green)"
+                      onClick={handleCancelClick}
+                    >
+                      Cancel
+                    </ActionButtonStyle>
+                    <ActionButtonStyle
+                      color="var(--red)"
+                      onClick={handleConfirmClick}
+                    >
+                      Confirm
+                    </ActionButtonStyle>
+                  </ConfirmRemoveContainer>
+                )}
               </CartItemsData>
             </CartItems>
             <CartItems>

@@ -78,13 +78,6 @@ export const CartItemsData = styled.div`
 
   & button {
     margin-top: 0.5rem;
-    padding: 0.5rem !important;
-    border-color: var(--red);
-    background: var(--red);
-
-    &:hover {
-      color: var(--red);
-    }
 
     @media (min-width: 768px) {
       padding: 0.5rem 2rem;
@@ -103,4 +96,9 @@ export const EmptyCartStyle = styled.div`
     font-size: 17px;
     padding: 1rem;
   }
+`;
+
+export const ConfirmRemoveContainer = styled.div`
+  display: flex;
+  gap: 20px;
 `;
