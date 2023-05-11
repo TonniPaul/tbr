@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
   font-family: "AmsterdamOne";
   src: url('/fonts/AmsterdamOne-eZ12l.ttf');
 }
+
   :root {
   --logo-font : 'AmsterdamOne', sans-serif;
   --primary-font : "Play", sans-serif;
@@ -30,8 +31,9 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
 }
-
 
 body {
   font-size: .8125rem;
@@ -72,9 +74,9 @@ button {
   font-size: inherit;
 }
 
-  button:disabled {
-    cursor: not-allowed !important;
-  }
+button:disabled {
+  cursor: not-allowed !important;
+}
 
 section {
   padding: 2rem 0 5rem;

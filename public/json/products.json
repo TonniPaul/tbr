@@ -1,352 +1,506 @@
 [
   {
-    "id": "001",
-    "name": "Red T-Shirt",
-    "description": "A comfortable and stylish red T-shirt made from 100% cotton.",
-    "price": 1999,
-    "image": "/assets/tbr-logo.png"
+    "id": "ABC123",
+    "name": "Floral Shirt",
+    "description": "This is a floral shirt that combines style and comfort. Perfect for any occasion.",
+    "price": 9999,
+    "currency": "NGN",
+    "categories": "Shirt",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 35,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
   },
   {
-    "id": "002",
-    "name": "Blue Jeans",
-    "description": "Classic blue jeans made from high-quality denim.",
-    "price": 3999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "003",
-    "name": "Black Hoodie",
-    "description": "A cozy black hoodie perfect for chilly days.",
-    "price": 2999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "004",
-    "name": "White Sneakers",
-    "description": "Comfortable white sneakers that go with any outfit.",
-    "price": 5999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "005",
-    "name": "Leather Wallet",
-    "description": "A stylish leather wallet with multiple card slots and a coin pocket.",
-    "price": 4999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "006",
-    "name": "Silver Earrings",
-    "description": "Elegant silver earrings with a modern design.",
-    "price": 2499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "007",
-    "name": "Gold Bracelet",
-    "description": "A simple and timeless gold bracelet.",
+    "id": "DEF456",
+    "name": "Denim Jeans",
+    "description": "These denim jeans offer a classic look and a comfortable fit. A must-have for any wardrobe.",
     "price": 7999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Pants",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 20,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
   },
   {
-    "id": "008",
-    "name": "Black Leather Jacket",
-    "description": "A classic black leather jacket that never goes out of style.",
+    "id": "GHI789",
+    "name": "Leather Bag",
+    "description": "This stylish leather bag is spacious and durable, making it ideal for everyday use.",
     "price": 14999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Bags",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
   },
   {
-    "id": "009",
-    "name": "Grey Sweatpants",
-    "description": "Comfortable and casual grey sweatpants.",
-    "price": 2499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "010",
-    "name": "Red High Heels",
-    "description": "Bold and stylish red high heels.",
-    "price": 8999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "011",
-    "name": "Blue Button-Up Shirt",
-    "description": "A classic blue button-up shirt made from high-quality cotton.",
-    "price": 8999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "012",
-    "name": "Black Leather Boots",
-    "description": "Sleek black leather boots that go with any outfit.",
-    "price": 9999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "013",
-    "name": "Green Polo Shirt",
-    "description": "A comfortable and stylish green polo shirt.",
-    "price": 5499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "014",
-    "name": "Brown Leather Belt",
-    "description": "A high-quality brown leather belt that will last for years.",
-    "price": 3999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "015",
-    "name": "Black Sunglasses",
-    "description": "Stylish black sunglasses with polarized lenses.",
-    "price": 7999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "016",
-    "name": "Red Backpack",
-    "description": "A sturdy and spacious red backpack with multiple pockets.",
-    "price": 4999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "017",
-    "name": "White Dress",
-    "description": "A beautiful white dress perfect for summer.",
-    "price": 6999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "018",
-    "name": "Black Leather Gloves",
-    "description": "Warm and stylish black leather gloves for cold weather.",
-    "price": 6499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "019",
-    "name": "Blue Running Shoes",
-    "description": "Comfortable and lightweight blue running shoes.",
-    "price": 7999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "020",
-    "name": "Silver Watch",
-    "description": "A sleek silver watch with a simple and elegant design.",
-    "price": 9999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "021",
-    "name": "Red Skirt",
-    "description": "A vibrant red skirt perfect for any occasion.",
-    "price": 3999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "022",
-    "name": "Black Dress Shoes",
-    "description": "Classic and stylish black dress shoes for any formal event.",
+    "id": "JKL012",
+    "name": "Striped Dress",
+    "description": "This elegant striped dress is perfect for a night out or a special occasion. Stand out with style.",
     "price": 11999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Dresses",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 5,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
   },
   {
-    "id": "023",
-    "name": "Grey Wool Coat",
-    "description": "A warm and stylish grey wool coat for cold weather.",
-    "price": 14999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "024",
-    "name": "Brown Leather Messenger Bag",
-    "description": "A sturdy and stylish brown leather messenger bag.",
-    "price": 8999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "025",
-    "name": "White Sneakers with Red Accents",
-    "description": "Unique and stylish white sneakers with red accents.",
-    "price": 6999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "026",
-    "name": "Navy Blue Blouse",
-    "description": "A versatile and comfortable navy blue blouse.",
-    "price": 3499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "027",
-    "name": "Silver Necklace",
-    "description": "A delicate and elegant silver necklace.",
-    "price": 3999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "028",
-    "name": "Black Leather Backpack",
-    "description": "A spacious and durable black leather backpack.",
-    "price": 12999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "029",
-    "name": "Black Leather Jacket",
-    "description": "A timeless and stylish black leather jacket.",
-    "price": 19999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "030",
-    "name": "Grey Hoodie",
-    "description": "A comfortable and stylish grey hoodie with a kangaroo pocket.",
-    "price": 4499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "031",
-    "name": "Black Running Shorts",
-    "description": "Breathable and lightweight black running shorts.",
-    "price": 2499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "032",
-    "name": "Brown Leather Belt",
-    "description": "A classic and durable brown leather belt.",
-    "price": 2999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "033",
-    "name": "Blue Denim Jeans",
-    "description": "A timeless pair of blue denim jeans.",
+    "id": "MNO345",
+    "name": "Graphic T-shirt",
+    "description": "Express yourself with this cool and trendy graphic t-shirt. Make a statement wherever you go.",
     "price": 5999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Shirt",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 30,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
   },
   {
-    "id": "034",
-    "name": "White T-shirt",
-    "description": "A simple and comfortable white t-shirt.",
-    "price": 1499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "035",
-    "name": "Black Leather Boots",
-    "description": "Stylish and durable black leather boots for any occasion.",
+    "id": "PQR678",
+    "name": "Casual Sneakers",
+    "description": "These casual sneakers offer both comfort and style. Perfect for everyday wear.",
     "price": 9999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Shoes",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
   },
   {
-    "id": "036",
-    "name": "Grey Wool Scarf",
-    "description": "A warm and cozy grey wool scarf.",
-    "price": 1999,
-    "image": "/assets/tbr-logo.png"
+    "id": "STU901",
+    "name": "Lace Evening Gown",
+    "description": "This elegant lace evening gown is perfect for formal events and special occasions.",
+    "price": 24999,
+    "currency": "NGN",
+    "categories": "Dresses",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 8,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
   },
   {
-    "id": "037",
-    "name": "Brown Leather Loafers",
-    "description": "Classic and stylish brown leather loafers for any occasion.",
-    "price": 8999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "038",
-    "name": "Black Leather Jacket",
-    "description": "A timeless and stylish black leather jacket.",
-    "price": 19999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "039",
-    "name": "Green Knit Sweater",
-    "description": "A cozy and stylish green knit sweater.",
+    "id": "VWX234",
+    "name": "Classic Leather Belt",
+    "description": "Add a touch of sophistication to your outfits with this classic leather belt.",
     "price": 4999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 25,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
   },
   {
-    "id": "040",
-    "name": "Red Hoodie",
-    "description": "A comfortable and stylish red hoodie with a kangaroo pocket.",
-    "price": 4499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "041",
-    "name": "Blue Polo Shirt",
-    "description": "A classic and comfortable blue polo shirt.",
+    "id": "YZA567",
+    "name": "Sports Cap",
+    "description": "Stay cool and stylish with this comfortable sports cap. Perfect for outdoor activities.",
     "price": 2999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 12,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
   },
   {
-    "id": "042",
-    "name": "Grey Running Shoes",
-    "description": "Comfortable and lightweight grey running shoes.",
+    "id": "BCD890",
+    "name": "Printed Maxi Skirt",
+    "description": "Make a fashion statement with this vibrant printed maxi skirt. Perfect for summer vibes.",
+    "price": 8999,
+    "currency": "NGN",
+    "categories": "Skirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 18,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
+  },
+  {
+    "id": "EFG123",
+    "name": "Faux Leather Backpack",
+    "description": "Carry your essentials in style with this trendy faux leather backpack. Perfect for daily use.",
+    "price": 15999,
+    "currency": "NGN",
+    "categories": "Bags",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 7,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
+  },
+  {
+    "id": "HIJ456",
+    "name": "Printed Wrap Dress",
+    "description": "Stay fashionable with this printed wrap dress. Perfect for both casual and formal occasions.",
+    "price": 11999,
+    "currency": "NGN",
+    "categories": "Dresses",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
+  },
+  {
+    "id": "KLM789",
+    "name": "Designer Sunglasses",
+    "description": "Protect your eyes and elevate your style with these chic designer sunglasses.",
     "price": 7999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
   },
   {
-    "id": "043",
-    "name": "Silver Bracelet",
-    "description": "A delicate and elegant silver bracelet.",
-    "price": 2999,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "044",
-    "name": "Silver Earrings",
-    "description": "Stylish and elegant silver earrings.",
+    "id": "NOP012",
+    "name": "Printed Scarf",
+    "description": "Add a touch of elegance to your outfit with this beautiful printed scarf.",
     "price": 3999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 20,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
   },
   {
-    "id": "045",
-    "name": "Black Backpack",
-    "description": "A spacious and durable black backpack.",
+    "id": "QRS345",
+    "name": "Ripped Denim Shorts",
+    "description": "Stay trendy with these ripped denim shorts. Perfect for a casual and cool look.",
     "price": 6999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Shorts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 8,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
   },
   {
-    "id": "046",
-    "name": "Red Leather Wallet",
-    "description": "A stylish and practical red leather wallet.",
+    "id": "TUV678",
+    "name": "Leather Wallet",
+    "description": "Keep your essentials organized with this stylish leather wallet. A must-have accessory.",
     "price": 4999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 25,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
   },
   {
-    "id": "047",
-    "name": "Grey Sweatpants",
-    "description": "Comfortable and stylish grey sweatpants.",
-    "price": 3499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "048",
-    "name": "Green Tea Leaves",
-    "description": "High-quality green tea leaves sourced from Japan.",
-    "price": 7499,
-    "image": "/assets/tbr-logo.png"
-  },
-  {
-    "id": "049",
-    "name": "Waterproof Watch",
-    "description": "A sleek and durable waterproof watch for outdoor activities.",
+    "id": "WXY901",
+    "name": "Striped Polo Shirt",
+    "description": "Stay classy with this timeless striped polo shirt. Perfect for a smart-casual look.",
     "price": 8999,
-    "image": "/assets/tbr-logo.png"
+    "currency": "NGN",
+    "categories": "Shirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
   },
   {
-    "id": "050",
-    "name": "Blue Denim Jeans",
-    "description": "Classic and comfortable blue denim jeans.",
-    "price": 9999,
-    "image": "/assets/tbr-logo.png"
+    "id": "ZAB234",
+    "name": "Bohemian Fringe Bag",
+    "description": "Express your bohemian style with this unique fringe bag. Perfect for a boho-chic look.",
+    "price": 15999,
+    "currency": "NGN",
+    "categories": "Bags",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 7,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "CDE567",
+    "name": "Printed Kimono",
+    "description": "Add a touch of exotic elegance to your wardrobe with this stunning printed kimono.",
+    "price": 12999,
+    "currency": "NGN",
+    "categories": "Outerwear",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "EFG890",
+    "name": "Sleek Wristwatch",
+    "description": "Stay punctual and stylish with this sleek and sophisticated wristwatch.",
+    "price": 11999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 20,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
+  },
+  {
+    "id": "HIJ123",
+    "name": "Cotton Chinos",
+    "description": "These comfortable cotton chinos are a versatile addition to your wardrobe.",
+    "price": 7999,
+    "currency": "NGN",
+    "categories": "Pants",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 12,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
+  },
+  {
+    "id": "HIJ456",
+    "name": "Printed Wrap Dress",
+    "description": "Stay fashionable with this printed wrap dress. Perfect for both casual and formal occasions.",
+    "price": 11999,
+    "currency": "NGN",
+    "categories": "Dresses",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
+  },
+  {
+    "id": "KLM789",
+    "name": "Designer Sunglasses",
+    "description": "Protect your eyes and elevate your style with these chic designer sunglasses.",
+    "price": 7999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "NOP012",
+    "name": "Printed Scarf",
+    "description": "Add a touch of elegance to your outfit with this beautiful printed scarf.",
+    "price": 3999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 20,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "QRS345",
+    "name": "Ripped Denim Shorts",
+    "description": "Stay trendy with these ripped denim shorts. Perfect for a casual and cool look.",
+    "price": 6999,
+    "currency": "NGN",
+    "categories": "Shorts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 8,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
+  },
+  {
+    "id": "TUV678",
+    "name": "Leather Wallet",
+    "description": "Keep your essentials organized with this stylish leather wallet. A must-have accessory.",
+    "price": 4999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 25,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
+  },
+  {
+    "id": "WXY901",
+    "name": "Striped Polo Shirt",
+    "description": "Stay classy with this timeless striped polo shirt. Perfect for a smart-casual look.",
+    "price": 8999,
+    "currency": "NGN",
+    "categories": "Shirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
+  },
+  {
+    "id": "ZAB234",
+    "name": "Bohemian Fringe Bag",
+    "description": "Express your bohemian style with this unique fringe bag. Perfect for a boho-chic look.",
+    "price": 15999,
+    "currency": "NGN",
+    "categories": "Bags",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 7,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "CDE567",
+    "name": "Printed Kimono",
+    "description": "Add a touch of exotic elegance to your wardrobe with this stunning printed kimono.",
+    "price": 12999,
+    "currency": "NGN",
+    "categories": "Outerwear",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "EFG890",
+    "name": "Sleek Wristwatch",
+    "description": "Stay punctual and stylish with this sleek and sophisticated wristwatch.",
+    "price": 11999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 20,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
+  },
+  {
+    "id": "HIJ123",
+    "name": "Cotton Chinos",
+    "description": "These comfortable cotton chinos are a versatile addition to your wardrobe.",
+    "price": 7999,
+    "currency": "NGN",
+    "categories": "Pants",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 12,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
+  },
+  {
+    "id": "XYZ901",
+    "name": "Tropical Print Maxi Dress",
+    "description": "Capture the essence of summer with this vibrant tropical print maxi dress. Perfect for beach days and vacations.",
+    "price": 17999,
+    "currency": "NGN",
+    "categories": "Dresses",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 8,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
+  },
+  {
+    "id": "ABC234",
+    "name": "Straw Beach Hat",
+    "description": "Stay protected from the sun while looking stylish with this trendy straw beach hat.",
+    "price": 4999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "DEF567",
+    "name": "Embroidered Denim Jacket",
+    "description": "Upgrade your denim collection with this embroidered denim jacket. It adds a unique touch to any outfit.",
+    "price": 15999,
+    "currency": "NGN",
+    "categories": "Jackets",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "GHI890",
+    "name": "Boho Fringe Earrings",
+    "description": "Complete your boho look with these stylish fringe earrings. They add a free-spirited vibe to any ensemble.",
+    "price": 5999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 20,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
+  },
+  {
+    "id": "JKL123",
+    "name": "Printed Palazzo Pants",
+    "description": "Make a statement with these printed palazzo pants. They offer a comfortable and fashionable look.",
+    "price": 8999,
+    "currency": "NGN",
+    "categories": "Pants",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 12,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
   }
 ]

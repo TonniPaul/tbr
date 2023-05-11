@@ -4,10 +4,18 @@ import FeedBackSection from "@/components/FeedBackSection/FeedBackSection";
 import Head from "next/head";
 import productsData from "../public/json/products.json";
 import { useState } from "react";
-import { MyProductProps } from "@/interface/ProductsProps";
+import { AllProducts, MyPro } from "@/interface/AllProduct";
+import useSWR from "swr";
+import Loader from "@/components/Loader/Loader";
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-  const [myProduct, setMyProduct] = useState<MyProductProps[]>(productsData);
+  const { data, error } = useSWR("/api/products", fetcher);
+  if (error) return <div>Error fetching comments</div>;
+  if (!data) return <Loader />;
+
+  const products = data;
   return (
     <>
       <Head>
@@ -21,7 +29,8 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
-        <ProductSectionsCard />
+        <ProductSectionsCard title={"NEW Product"} product={products} />
+        <ProductSectionsCard title={"All Product"} product={products} />
         <FeedBackSection />
       </main>
     </>
