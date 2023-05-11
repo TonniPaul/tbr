@@ -82,12 +82,11 @@ export const NavUl = styled.ul<NavUlProps>`
 
   &::before {
     content: "";
-    background: rgb(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     width: 11vw;
     height: 100vh;
     position: absolute;
     right: -12%;
-    backdrop-filter: blur(200px);
 
     @media (min-width: 768px) {
       display: none;
@@ -108,6 +107,12 @@ export const NavUl = styled.ul<NavUlProps>`
 `;
 
 export const NavLinksStyle = styled.li`
+  &:hover {
+    transition: var(--short-transition);
+    border-bottom: 2px solid var(--yellow);
+    scale: 1.1;
+  }
+
   & > a {
     display: block;
     margin: 10px auto;
