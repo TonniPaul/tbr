@@ -60,15 +60,13 @@ const CartPage = () => {
                 )}
                 {isRemoving && (
                   <ConfirmRemoveContainer>
-                    <ActionButtonStyle
-                      color="var(--green)"
-                      onClick={handleCancelClick}
-                    >
+                    <ActionButtonStyle onClick={handleCancelClick}>
                       Cancel
                     </ActionButtonStyle>
                     <ActionButtonStyle
-                      color="var(--red)"
+                      color="var(--white)"
                       onClick={handleConfirmClick}
+                      hoverColor="var(--yellow)"
                     >
                       Confirm
                     </ActionButtonStyle>
@@ -92,3 +90,4 @@ const CartPage = () => {
 };
 
 export default CartPage;
+
