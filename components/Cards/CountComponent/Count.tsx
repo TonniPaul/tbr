@@ -3,19 +3,19 @@ import { PriceStyle } from "../DetailedProductCard/detailedProduct.styles";
 import { CountButton } from "./count.style";
 
 const Count = () => {
-  const [unit, setUnits] = useState<number>(0);
+  const [unit, setUnits] = useState<number>(1);
 
   const handleUnitAdd = () => {
     setUnits((prev) => prev + 1);
   };
 
   const handleUnitSubtract = () => {
-    if (unit === 0) return;
+    if (unit === 1) return;
     setUnits((prev) => prev - 1);
   };
   return (
     <CountButton>
-      <button onClick={handleUnitSubtract} disabled={unit === 0 ? true : false}>
+      <button onClick={handleUnitSubtract} disabled={unit === 1 ? true : false}>
         -
       </button>
       <span> {unit} </span>
