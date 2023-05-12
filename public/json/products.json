@@ -370,5 +370,173 @@
       "availability": true
     },
     "images": "/assets/product1.jpg"
+  },
+  {
+    "id": "STU902",
+    "name": "Pleated Mini Skirt",
+    "description": "This pleated mini skirt is a versatile piece that can be dressed up or down.",
+    "price": 19999,
+    "currency": "NGN",
+    "categories": "Skirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "STU903",
+    "name": "Ruffled Crop Top",
+    "description": "This ruffled crop top is a trendy and flattering piece that is perfect for summer.",
+    "price": 14999,
+    "currency": "NGN",
+    "categories": "Tops",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 6,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "STU904",
+    "name": "Vintage Denim Jacket",
+    "description": "This vintage denim jacket is a classic piece that can be worn for years to come.",
+    "price": 19999,
+    "currency": "NGN",
+    "categories": "Jackets",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 12,
+      "availability": true
+    },
+    "images": "/assets/product5.jpg"
+  },
+  {
+    "id": "STU905",
+    "name": "Leather Leggings",
+    "description": "These leather leggings are a must-have for any wardrobe. They are stylish and comfortable, and can be dressed up or down.",
+    "price": 24999,
+    "currency": "NGN",
+    "categories": "Pants",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 4,
+      "availability": true
+    },
+    "images": "/assets/product6.jpg"
+  },
+  {
+    "id": "STU906",
+    "name": "Chunky Sneakers",
+    "description": "These chunky sneakers are a trendy and comfortable pair of shoes that are perfect for everyday wear.",
+    "price": 12999,
+    "currency": "NGN",
+    "categories": "Shoes",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 16,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "STU907",
+    "name": "Satchel Bag",
+    "description": "This satchel bag is a stylish and functional bag that is perfect for everyday use.",
+    "price": 14999,
+    "currency": "NGN",
+    "categories": "Bags",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 8,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "STU950",
+    "name": "Silk Pajamas",
+    "description": "These silk pajamas are the perfect way to relax and unwind after a long day.",
+    "price": 19999,
+    "currency": "NGN",
+    "categories": "Sleepwear",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product1.jpg"
+  },
+  {
+    "id": "STU951",
+    "name": "Fleece Blanket",
+    "description": "This fleece blanket is the perfect way to stay warm and cozy on a cold day.",
+    "price": 14999,
+    "currency": "NGN",
+    "categories": "Home Decor",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 12,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "STU952",
+    "name": "Coffee Mug",
+    "description": "This coffee mug is the perfect way to start your day.",
+    "price": 9999,
+    "currency": "NGN",
+    "categories": "Home Decor",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 8,
+      "availability": true
+    },
+    "images": "/assets/product4.jpg"
+  },
+  {
+    "id": "STU953",
+    "name": "Planter",
+    "description": "This planter is the perfect way to add a touch of greenery to your home.",
+    "price": 12999,
+    "currency": "NGN",
+    "categories": "Home Decor",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 6,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
+  },
+  {
+    "id": "STU954",
+    "name": "Throw Pillow",
+    "description": "This throw pillow is the perfect way to add a pop of color to your couch.",
+    "price": 7999,
+    "currency": "NGN",
+    "categories": "Home Decor",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
+  {
+    "id": "STU955",
+    "name": "Nightstand",
+    "description": "This nightstand is the perfect way to add storage and a touch of style to your bedroom.",
+    "price": 24999,
+    "currency": "NGN",
+    "categories": "Home Decor",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 4,
+      "availability": true
+    },
+    "images": "/assets/product2.jpg"
   }
 ]
