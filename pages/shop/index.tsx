@@ -19,7 +19,12 @@ const Shop = ({ products }: MyProductProps) => {
       </Head>
 
       <ShopPageStyles>
-        <SearchFilter onChange={(e) => {}} handleFilterByCategory={(e) => {}} />
+        <SearchFilter
+          handleFilterByCategory={(e) => {}}
+          onChange={function (searchValue: string, filterValue: string): void {
+            throw new Error("Function not implemented.");
+          }}
+        />
         <ProductSectionsCard product={products} />
       </ShopPageStyles>
     </>
@@ -29,7 +34,7 @@ const Shop = ({ products }: MyProductProps) => {
 export default Shop;
 
 export async function getStaticProps() {
-  const res = await fetch("https://tbr.tonnipaul.com//api/products");
+  const res = await fetch("http://localhost:3000/api/products");
   const products = await res.json();
 
   return {

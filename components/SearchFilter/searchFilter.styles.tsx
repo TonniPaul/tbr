@@ -31,10 +31,21 @@ export const FilterByCategoryStyle = styled.div`
   display: flex;
   align-items: center;
   box-shadow: var(--box_shadow);
-  padding-right: 10px;
+  padding-right: 1rem;
   position: relative;
   cursor: pointer;
   width: max-content;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+
+  & > img {
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: 2;
+    right: 1rem;
+  }
 
   & select {
     padding: 0.5rem;
@@ -48,6 +59,7 @@ export const FilterByCategoryStyle = styled.div`
     color: var(--black);
     --webkit-appearance: none;
     appearance: none;
-    z-index: 1;
+    z-index: 2;
+    width: 100%;
   }
 `;

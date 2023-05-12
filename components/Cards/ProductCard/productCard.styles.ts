@@ -7,6 +7,7 @@ export const ProductCardContainerStyle = styled.div`
   border-radius: var(--border_radius_small);
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 
   & * {
     padding-bottom: 10px;
@@ -59,8 +60,8 @@ export const ProductTitleStyle = styled.p`
   }
 `;
 
-export const ProductPriceStyle = styled.div`
+export const ProductPriceStyle = styled.p`
+  font-weight: 600;
   & span {
-    font-weight: 900;
   }
 `;

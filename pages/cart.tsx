@@ -1,5 +1,7 @@
+import CartItemsCard from "@/components/Cards/CartItemsCard/CartItemsCard";
 import Count from "@/components/Cards/CountComponent/Count";
 import SubTotal from "@/components/Cards/Subtotal/SubTotal";
+import Toast from "@/components/Toast/Toast";
 import {
   CartImageContainer,
   CartItems,
@@ -12,22 +14,22 @@ import {
 import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CartPage = () => {
-  const [isRemoving, setIsRemoving] = useState<boolean>(false);
+  const [isDeleted, setIsDeleted] = useState<boolean>(false);
   const items = 2;
 
-  const handleRemoveClick = () => {
-    setIsRemoving(true);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsDeleted(false);
+    }, 4000);
 
-  const handleCancelClick = () => {
-    setIsRemoving(false);
-  };
+    return () => clearTimeout(timer);
+  }, [isDeleted]);
 
   const handleConfirmClick = () => {
-    setIsRemoving(false);
+    setIsDeleted(true);
   };
 
   return (
@@ -37,44 +39,14 @@ const CartPage = () => {
           <p>Your Shopping Cart</p>
 
           <div>
-            <CartItems>
-              <CartImageContainer>
-                <Image
-                  src="/assets/product4.jpg"
-                  alt="product-image"
-                  width={300}
-                  height={300}
-                />
-              </CartImageContainer>
-              <CartItemsData>
-                <p> Yellow Prints Top </p>
-                <p>
-                  <BoldText>NGN</BoldText> 4,800
-                </p>
-                <Count />
-
-                {!isRemoving && (
-                  <ActionButtonStyle onClick={handleRemoveClick}>
-                    Remove From Cart
-                  </ActionButtonStyle>
-                )}
-                {isRemoving && (
-                  <ConfirmRemoveContainer>
-                    <ActionButtonStyle onClick={handleCancelClick}>
-                      Cancel
-                    </ActionButtonStyle>
-                    <ActionButtonStyle
-                      color="var(--white)"
-                      onClick={handleConfirmClick}
-                      hoverColor="var(--yellow)"
-                    >
-                      Confirm
-                    </ActionButtonStyle>
-                  </ConfirmRemoveContainer>
-                )}
-              </CartItemsData>
-            </CartItems>
+            <CartItemsCard onConfirmClick={handleConfirmClick} />
+            <CartItemsCard onConfirmClick={handleConfirmClick} />
           </div>
+          <Toast
+            message={"Removed From Cart 😔"}
+            status="Success"
+            isVisible={isDeleted}
+          />
         </CartItemsContainer>
       ) : (
         <EmptyCartStyle>
@@ -90,4 +62,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-

@@ -20,6 +20,7 @@ export const CartItemsContainer = styled.div`
   flex-basis: 100%;
   padding: 1rem;
   border-radius: var(--border_radius_small);
+  position: relative;
 
   @media (min-width: 550px) {
     flex-basis: 60%;

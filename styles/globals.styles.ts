@@ -5,7 +5,7 @@ interface ColorsProps {
   hoverColor?: string;
 }
 
-export const SectionHeaderText = styled.p`
+export const SectionHeaderText = styled.div`
   font-size: 17px;
   font-weight: 800;
   padding: 2rem 0;
@@ -20,11 +20,23 @@ export const ActionButtonStyle = styled.button<ColorsProps>`
   background: ${({ color }) => (color ? color : "var(--yellow)")};
   padding: 0.5rem 0.8rem;
   border-radius: var(--border_radius_small);
-  color: var(--white);
   transition: background var(--short-transition);
   color: var(--black);
   border: 1px solid var(--yellow);
   z-index: 1;
+  display: flex;
+  margin: auto;
+
+  & > img,
+  span {
+    align-self: center;
+    padding: 0;
+  }
+
+  & > span {
+    margin-left: 10px;
+    font-weight: 600;
+  }
 
   &:hover {
     background: ${({ hoverColor }) =>

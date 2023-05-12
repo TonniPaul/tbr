@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   FilterByCategoryStyle,
   SearchFilterStyles,
@@ -14,10 +14,15 @@ interface InputProps {
 const SearchFilter = ({ onChange, handleFilterByCategory }: InputProps) => {
   const [searchValue, setSearchValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
+  const optionRef = useRef<HTMLOptionElement>(null);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
     onChange(e.target.value, filterValue);
+  };
+
+  const handleOptionClick = () => {
+    if (optionRef.current) optionRef.current.focus();
   };
 
   const handleSelectedFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -53,8 +58,9 @@ const SearchFilter = ({ onChange, handleFilterByCategory }: InputProps) => {
           id="category"
           onChange={handleSelectedFilter}
           value={filterValue}
+          //  ref={optionRef}
         >
-          <option value="All" hidden>
+          <option value="All" hidden ref={optionRef}>
             Filter by Category
           </option>
           <option value="All">All Products</option>
@@ -65,7 +71,13 @@ const SearchFilter = ({ onChange, handleFilterByCategory }: InputProps) => {
           <option value="Accessories">Accessories</option>
           <option value="Book">Book</option>
         </select>
-        <Image src="/assets/next.png" alt="dropdown" width={16} height={16} />
+        <Image
+          src="/assets/next.png"
+          alt="dropdown"
+          width={16}
+          height={16}
+          onClick={handleOptionClick}
+        />
       </FilterByCategoryStyle>
     </SearchFilterStyles>
   );

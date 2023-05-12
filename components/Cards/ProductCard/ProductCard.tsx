@@ -11,13 +11,19 @@ import { useRouter } from "next/router";
 import Toast from "@/components/Toast/Toast";
 import { useEffect, useState } from "react";
 
-const ProductCard = ({ image, title, price, id }: ProductCardProps) => {
+const ProductCard = ({
+  image,
+  title,
+  price,
+  id,
+  currency,
+}: ProductCardProps) => {
   const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowToast(false);
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [showToast]);
@@ -50,10 +56,16 @@ const ProductCard = ({ image, title, price, id }: ProductCardProps) => {
         {title}
       </ProductTitleStyle>
       <ProductPriceStyle onClick={handleProductRoute}>
-        <BoldText>NGN</BoldText> {price.toLocaleString()}
+        {currency} {price.toLocaleString()}
       </ProductPriceStyle>
       <ActionButtonStyle onClick={handleAddToCart}>
-        Add to Cart
+        <Image
+          src="/assets/cart-icon.svg"
+          alt="cartIcon"
+          width={20}
+          height={20}
+        />
+        <span>Add to Cart</span>
       </ActionButtonStyle>
       <Toast
         status="Success"

@@ -1,20 +1,23 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { bounce } from "@/styles/globals.styles";
 
-interface ToastStyleProps {
-  visible: boolean;
-}
+const pulse = keyframes`
+50% {transform : translateY(-20px)  translateX(-50%)}
+`;
 
-export const ToastContainer = styled.div<ToastStyleProps>`
+export const ToastContainer = styled.div`
   position: fixed;
   background: var(--black);
-  width: 200px;
-  top: 20%;
-  left: auto;
+  width: calc(100% - 1.5rem);
+  max-width: 300px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   margin: auto;
   border: 2px solid var(--yellow);
   border-radius: 5px;
-  animation: ${bounce} 2s infinite;
+  animation: ${pulse} 2s;
+  text-align: center;
 
   & p {
     padding: 0.5rem 1rem !important;

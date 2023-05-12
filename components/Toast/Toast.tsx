@@ -8,10 +8,12 @@ interface ToastProps {
 }
 
 const Toast = ({ message, isVisible, status }: ToastProps) => {
+
+   
   return (
     <>
       {isVisible && (
-        <ToastContainer visible={isVisible}>
+        <ToastContainer>
           <p>{status}</p>
           <p>{message}</p>
         </ToastContainer>
