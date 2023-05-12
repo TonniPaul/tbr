@@ -2,6 +2,6 @@ import { AllProducts } from "./AllProduct";
 import { ProductCardProps } from "./ProductCardProps";
 
 export interface ProductSectionProps {
-  title: string;
+  title?: string;
   product: AllProducts[];
 }

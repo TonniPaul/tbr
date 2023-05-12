@@ -69,6 +69,21 @@
     },
     "images": "/assets/product5.jpg"
   },
+
+  {
+    "id": "VWX234",
+    "name": "Classic Leather Belt",
+    "description": "Add a touch of sophistication to your outfits with this classic leather belt.",
+    "price": 4999,
+    "currency": "NGN",
+    "categories": "Accessories",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 25,
+      "availability": true
+    },
+    "images": "/assets/product3.jpg"
+  },
   {
     "id": "PQR678",
     "name": "Casual Sneakers",
@@ -97,20 +112,7 @@
     },
     "images": "/assets/product2.jpg"
   },
-  {
-    "id": "VWX234",
-    "name": "Classic Leather Belt",
-    "description": "Add a touch of sophistication to your outfits with this classic leather belt.",
-    "price": 4999,
-    "currency": "NGN",
-    "categories": "Accessories",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 25,
-      "availability": true
-    },
-    "images": "/assets/product3.jpg"
-  },
+
   {
     "id": "YZA567",
     "name": "Sports Cap",
@@ -125,20 +127,7 @@
     },
     "images": "/assets/product4.jpg"
   },
-  {
-    "id": "BCD890",
-    "name": "Printed Maxi Skirt",
-    "description": "Make a fashion statement with this vibrant printed maxi skirt. Perfect for summer vibes.",
-    "price": 8999,
-    "currency": "NGN",
-    "categories": "Skirts",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 18,
-      "availability": true
-    },
-    "images": "/assets/product5.jpg"
-  },
+
   {
     "id": "EFG123",
     "name": "Faux Leather Backpack",
@@ -168,47 +157,20 @@
     "images": "/assets/product2.jpg"
   },
   {
-    "id": "KLM789",
-    "name": "Designer Sunglasses",
-    "description": "Protect your eyes and elevate your style with these chic designer sunglasses.",
-    "price": 7999,
+    "id": "BCD890",
+    "name": "Printed Maxi Skirt",
+    "description": "Make a fashion statement with this vibrant printed maxi skirt. Perfect for summer vibes.",
+    "price": 8999,
     "currency": "NGN",
-    "categories": "Accessories",
+    "categories": "Skirts",
     "brand": "Brand Name",
     "inventory": {
-      "stock": 15,
-      "availability": true
-    },
-    "images": "/assets/product3.jpg"
-  },
-  {
-    "id": "NOP012",
-    "name": "Printed Scarf",
-    "description": "Add a touch of elegance to your outfit with this beautiful printed scarf.",
-    "price": 3999,
-    "currency": "NGN",
-    "categories": "Accessories",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 20,
-      "availability": true
-    },
-    "images": "/assets/product4.jpg"
-  },
-  {
-    "id": "QRS345",
-    "name": "Ripped Denim Shorts",
-    "description": "Stay trendy with these ripped denim shorts. Perfect for a casual and cool look.",
-    "price": 6999,
-    "currency": "NGN",
-    "categories": "Shorts",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 8,
+      "stock": 18,
       "availability": true
     },
     "images": "/assets/product5.jpg"
   },
+
   {
     "id": "TUV678",
     "name": "Leather Wallet",
@@ -224,20 +186,6 @@
     "images": "/assets/product1.jpg"
   },
   {
-    "id": "WXY901",
-    "name": "Striped Polo Shirt",
-    "description": "Stay classy with this timeless striped polo shirt. Perfect for a smart-casual look.",
-    "price": 8999,
-    "currency": "NGN",
-    "categories": "Shirts",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 15,
-      "availability": true
-    },
-    "images": "/assets/product2.jpg"
-  },
-  {
     "id": "ZAB234",
     "name": "Bohemian Fringe Bag",
     "description": "Express your bohemian style with this unique fringe bag. Perfect for a boho-chic look.",
@@ -251,34 +199,7 @@
     },
     "images": "/assets/product3.jpg"
   },
-  {
-    "id": "CDE567",
-    "name": "Printed Kimono",
-    "description": "Add a touch of exotic elegance to your wardrobe with this stunning printed kimono.",
-    "price": 12999,
-    "currency": "NGN",
-    "categories": "Outerwear",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 10,
-      "availability": true
-    },
-    "images": "/assets/product4.jpg"
-  },
-  {
-    "id": "EFG890",
-    "name": "Sleek Wristwatch",
-    "description": "Stay punctual and stylish with this sleek and sophisticated wristwatch.",
-    "price": 11999,
-    "currency": "NGN",
-    "categories": "Accessories",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 20,
-      "availability": true
-    },
-    "images": "/assets/product5.jpg"
-  },
+
   {
     "id": "HIJ123",
     "name": "Cotton Chinos",
@@ -293,20 +214,22 @@
     },
     "images": "/assets/product1.jpg"
   },
+
   {
-    "id": "HIJ456",
-    "name": "Printed Wrap Dress",
-    "description": "Stay fashionable with this printed wrap dress. Perfect for both casual and formal occasions.",
-    "price": 11999,
+    "id": "CDE567",
+    "name": "Printed Kimono",
+    "description": "Add a touch of exotic elegance to your wardrobe with this stunning printed kimono.",
+    "price": 12999,
     "currency": "NGN",
-    "categories": "Dresses",
+    "categories": "Outerwear",
     "brand": "Brand Name",
     "inventory": {
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/product4.jpg"
   },
+
   {
     "id": "KLM789",
     "name": "Designer Sunglasses",
@@ -349,20 +272,7 @@
     },
     "images": "/assets/product5.jpg"
   },
-  {
-    "id": "TUV678",
-    "name": "Leather Wallet",
-    "description": "Keep your essentials organized with this stylish leather wallet. A must-have accessory.",
-    "price": 4999,
-    "currency": "NGN",
-    "categories": "Accessories",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 25,
-      "availability": true
-    },
-    "images": "/assets/product1.jpg"
-  },
+
   {
     "id": "WXY901",
     "name": "Striped Polo Shirt",
@@ -378,34 +288,6 @@
     "images": "/assets/product2.jpg"
   },
   {
-    "id": "ZAB234",
-    "name": "Bohemian Fringe Bag",
-    "description": "Express your bohemian style with this unique fringe bag. Perfect for a boho-chic look.",
-    "price": 15999,
-    "currency": "NGN",
-    "categories": "Bags",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 7,
-      "availability": true
-    },
-    "images": "/assets/product3.jpg"
-  },
-  {
-    "id": "CDE567",
-    "name": "Printed Kimono",
-    "description": "Add a touch of exotic elegance to your wardrobe with this stunning printed kimono.",
-    "price": 12999,
-    "currency": "NGN",
-    "categories": "Outerwear",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 10,
-      "availability": true
-    },
-    "images": "/assets/product4.jpg"
-  },
-  {
     "id": "EFG890",
     "name": "Sleek Wristwatch",
     "description": "Stay punctual and stylish with this sleek and sophisticated wristwatch.",
@@ -418,20 +300,6 @@
       "availability": true
     },
     "images": "/assets/product5.jpg"
-  },
-  {
-    "id": "HIJ123",
-    "name": "Cotton Chinos",
-    "description": "These comfortable cotton chinos are a versatile addition to your wardrobe.",
-    "price": 7999,
-    "currency": "NGN",
-    "categories": "Pants",
-    "brand": "Brand Name",
-    "inventory": {
-      "stock": 12,
-      "availability": true
-    },
-    "images": "/assets/product1.jpg"
   },
   {
     "id": "XYZ901",

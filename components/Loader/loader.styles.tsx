@@ -13,6 +13,8 @@ export const LoaderContainer = styled.div`
   justify-content: center;
   transition: var(--short-transition);
   overflow: hidden;
+  position: fixed;
+  top: 0;
 
   & p {
     font-style: italic;

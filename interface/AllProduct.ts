@@ -13,6 +13,6 @@ export interface AllProducts {
   images: string;
 }
 
-export interface MyPro {
-  product: AllProducts[];
+export interface MyProductProps {
+  products: AllProducts[];
 }

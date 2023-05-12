@@ -8,22 +8,12 @@ import {
 import { ActionButtonStyle } from "@/styles/globals.styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
 
 const DetailedProductCard = () => {
-  const [unit, setUnits] = useState<number>(0);
   const goBack = useRouter();
 
   const handleGoBAck = () => {
     goBack.back();
-  };
-  const handleUnitAdd = () => {
-    setUnits((prev) => prev + 1);
-  };
-
-  const handleUnitSubtract = () => {
-    if (unit === 0) return;
-    setUnits((prev) => prev - 1);
   };
   return (
     <DetailedProductContainer>

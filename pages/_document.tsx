@@ -45,9 +45,10 @@ export default class MyDocument extends Document {
 
           <link
             rel="preload"
-            href="/fonts/fonts/AmsterdamOne-eZ12l.ttf"
+            href="/fonts/AmsterdamOne-eZ12l.ttf"
             as="font"
             type="font/ttf"
+            crossOrigin=""
           />
           {this.props.styles}
         </Head>

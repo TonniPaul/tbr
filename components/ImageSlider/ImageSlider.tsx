@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import {
   ImageSliderContainer,
   ImageContainer,
@@ -21,22 +21,24 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
 
-  const prevImage = () =>
-    setCurrentImageIndex(
-      currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1
+  const prevImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
+  }, [images.length]);
 
-  const nextImage = () =>
-    setCurrentImageIndex(
-      currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
+  const nextImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
+  }, [images.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
     }, 5000);
     return () => clearInterval(interval);
-  }, [nextImage, prevImage]);
+  }, [nextImage]);
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.touches[0].clientX;

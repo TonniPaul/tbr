@@ -3,18 +3,6 @@ import styled from "styled-components";
 export const DetailedProductContainer = styled.div`
   padding: 1rem 2rem 2rem;
 
-  & > button {
-    box-shadow: var(--box_shadow);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border_radius_small);
-    margin-bottom: 1rem;
-
-    & span {
-      font-size: 20px;
-      font-weight: 900;
-    }
-  }
-
   & > div {
     @media (min-width: 768px) {
       display: flex;
@@ -25,6 +13,18 @@ export const DetailedProductContainer = styled.div`
 
   @media (min-width: 768px) {
     padding: 2rem;
+  }
+`;
+
+export const GoBackButton = styled.button`
+  box-shadow: var(--box_shadow);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border_radius_small);
+  margin-bottom: 1rem;
+
+  & span {
+    font-size: 20px;
+    font-weight: 900;
   }
 `;
 

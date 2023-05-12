@@ -2,20 +2,25 @@ import ProductSectionsCard from "@/components/Cards/ProductSectionsCard/ProductS
 import Hero from "@/components/Hero/Hero";
 import FeedBackSection from "@/components/FeedBackSection/FeedBackSection";
 import Head from "next/head";
-import productsData from "../public/json/products.json";
-import { useState } from "react";
-import { AllProducts, MyPro } from "@/interface/AllProduct";
 import useSWR from "swr";
 import Loader from "@/components/Loader/Loader";
+import { useRouter } from "next/router";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
+  const router = useRouter();
+
   const { data, error } = useSWR("/api/products", fetcher);
   if (error) return <div>Error fetching comments</div>;
   if (!data) return <Loader />;
 
   const products = data;
+
+  const handleProductRoute = (productId: string) => {
+    router.push(`/shop/${productId}`);
+  };
+
   return (
     <>
       <Head>
@@ -29,8 +34,16 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
-        <ProductSectionsCard title={"NEW Product"} product={products} />
-        <ProductSectionsCard title={"All Product"} product={products} />
+        <section>
+          <ProductSectionsCard
+            title={"New Arrivals"}
+            product={products.slice(5, 10)}
+          />
+          <ProductSectionsCard
+            title={"Gowns Section"}
+            product={products.slice(0, 5).reverse()}
+          />
+        </section>
         <FeedBackSection />
       </main>
     </>
