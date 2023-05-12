@@ -49,7 +49,7 @@ const ProductCard = ({
           width={250}
           height={250}
           onClick={handleProductRoute}
-          priority
+          // priority
         />
       </ProductCardImageContainer>
       <ProductTitleStyle onClick={handleProductRoute}>

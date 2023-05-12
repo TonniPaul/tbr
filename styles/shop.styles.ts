@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ShopPageStyles = styled.section`
   & > div {
-    justify-content: flex-start !important;
+    padding: 0 2rem;
 
     & > a {
       margin: 0;

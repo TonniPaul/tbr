@@ -18,6 +18,7 @@ export const ToastContainer = styled.div`
   border-radius: 5px;
   animation: ${pulse} 2s;
   text-align: center;
+  z-index: 5 !important;
 
   & p {
     padding: 0.5rem 1rem !important;

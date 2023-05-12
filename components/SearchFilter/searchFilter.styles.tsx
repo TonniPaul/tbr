@@ -1,20 +1,26 @@
 import styled from "styled-components";
 
-export const SearchFilterStyles = styled.span`
+export const SearchFilterStyles = styled.div`
   display: flex;
-  justify-content: space-between !important;
-  margin: 0 auto 2rem;
-  width: 90% !important;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+
+  & > div {
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
+  }
 `;
 
 export const SearchInputStyle = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
-  box-shadow: var(--box_shadow);
   padding: 0 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  flex-basis: 400px;
+  height: max-content;
 
   & input {
     width: 100%;
@@ -23,43 +29,54 @@ export const SearchInputStyle = styled.div`
     border: none;
     background: var(--white);
     font-family: inherit;
-    font-size: 0.9rem;
   }
 `;
 
-export const FilterByCategoryStyle = styled.div`
-  display: flex;
-  align-items: center;
-  box-shadow: var(--box_shadow);
-  padding-right: 1rem;
+export const FilterByCategoryStyle = styled.div<{ isOpen: boolean }>`
+  min-width: 200px;
   position: relative;
-  cursor: pointer;
-  width: max-content;
-  cursor: pointer;
-  border-radius: 5px;
-  position: relative;
-  z-index: 2;
 
-  & > img {
-    transform: rotate(90deg);
-    position: absolute;
-    z-index: 2;
-    right: 1rem;
+  & > div:first-child {
+    transition: var(--short-transition);
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+
+    & img {
+      transition: var(--short-transition);
+      transform: rotate(${({ isOpen }) => (isOpen ? "-90deg" : "90deg")});
+    }
   }
 
-  & select {
-    padding: 0.5rem;
-    padding-right: 3rem;
-    outline: none;
-    border: none;
-    font-family: inherit;
-    font-size: inherit;
-    border-radius: 5px;
-    background: var(--white);
-    color: var(--black);
-    --webkit-appearance: none;
-    appearance: none;
-    z-index: 2;
-    width: 100%;
+  & > div:nth-child(2) {
+    position: absolute;
+    bottom: -135px;
+    z-index: 5;
+    background: var(--light-grey);
+    width: 200px;
+    transition: var(--short-transition);
+
+    opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+
+    & p {
+      padding: 0.4rem 1rem;
+      text-transform: capitalize;
+      cursor: pointer;
+      border: 2px solid var(--white);
+      transition: var(--short-transition);
+
+      &:last-child {
+        padding-bottom: 1rem;
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: var(--black);
+        color: var(--white);
+      }
+    }
   }
 `;

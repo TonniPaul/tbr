@@ -1,10 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   FilterByCategoryStyle,
   SearchFilterStyles,
   SearchInputStyle,
 } from "./searchFilter.styles";
 import Image from "next/image";
+
+const myProductCategories = [
+  { category: "bag" },
+  { category: "Gowns" },
+  { category: "Top" },
+  { category: "Trouser" },
+];
 
 interface InputProps {
   onChange: (searchValue: string, filterValue: string) => void;
@@ -14,26 +21,26 @@ interface InputProps {
 const SearchFilter = ({ onChange, handleFilterByCategory }: InputProps) => {
   const [searchValue, setSearchValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
-  const optionRef = useRef<HTMLOptionElement>(null);
+  const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
+
+  const handleDropDownClick = () => {
+    setIsDropDownOpen((prev) => !prev);
+  };
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
     onChange(e.target.value, filterValue);
   };
 
-  const handleOptionClick = () => {
-    if (optionRef.current) optionRef.current.focus();
-  };
-
-  const handleSelectedFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterValue(e.target.value);
-    handleFilterByCategory(e.target.value);
+  const handleSelectedFilter = (filterValue: string) => {
+    setFilterValue(filterValue);
+    handleFilterByCategory(filterValue);
     setSearchValue("");
-    onChange(searchValue, e.target.value);
+    setIsDropDownOpen(false);
   };
 
   return (
-    <SearchFilterStyles className="input_main_container">
+    <SearchFilterStyles>
       <SearchInputStyle>
         <Image
           src="/assets/search.png"
@@ -52,32 +59,23 @@ const SearchFilter = ({ onChange, handleFilterByCategory }: InputProps) => {
         />
       </SearchInputStyle>
 
-      <FilterByCategoryStyle>
-        <select
-          name="category"
-          id="category"
-          onChange={handleSelectedFilter}
-          value={filterValue}
-          //  ref={optionRef}
-        >
-          <option value="All" hidden ref={optionRef}>
-            Filter by Category
-          </option>
-          <option value="All">All Products</option>
-          <option value="Bags">Bags</option>
-          <option value="Gowns">Gowns</option>
-          <option value="Skirts">Skirts</option>
-          <option value="Shirts">Shirts</option>
-          <option value="Accessories">Accessories</option>
-          <option value="Book">Book</option>
-        </select>
-        <Image
-          src="/assets/next.png"
-          alt="dropdown"
-          width={16}
-          height={16}
-          onClick={handleOptionClick}
-        />
+      <FilterByCategoryStyle isOpen={isDropDownOpen}>
+        <div onClick={handleDropDownClick}>
+          <p>Filter by category:</p>
+          <Image src="/assets/next.png" alt="dropdown" width={16} height={16} />
+        </div>
+        {isDropDownOpen && (
+          <div>
+            {myProductCategories.map((data) => (
+              <p
+                key={data.category}
+                onClick={() => handleSelectedFilter(data.category)}
+              >
+                {data.category}
+              </p>
+            ))}
+          </div>
+        )}
       </FilterByCategoryStyle>
     </SearchFilterStyles>
   );

@@ -21,6 +21,7 @@ export const ProductCardContainerStyle = styled.div`
 export const ProductCardImageContainer = styled.div`
   width: 140px;
   height: 140px;
+  z-index: 0;
 
   & img {
     width: 100%;
