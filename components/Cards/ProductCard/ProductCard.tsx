@@ -31,7 +31,7 @@ const ProductCard = ({
   }, [showToast]);
 
   const handleProductRoute = () => {
-    router.push(`/product/${id}`);
+    router.push(`/shop/${id}`);
   };
 
   const handleAddToCart = () => {
@@ -40,7 +40,7 @@ const ProductCard = ({
 
   return (
     <ProductCardContainerStyle>
-      <ProductCardImageContainer>
+      <ProductCardImageContainer href={`shop/${id}`}>
         <Image
           src={image}
           alt={`${title} image`}
@@ -49,9 +49,7 @@ const ProductCard = ({
           onClick={handleProductRoute}
         />
       </ProductCardImageContainer>
-      <ProductTitleStyle onClick={handleProductRoute}>
-        {title}
-      </ProductTitleStyle>
+      <ProductTitleStyle href={`shop/${id}`}>{title}</ProductTitleStyle>
       <ProductPriceStyle onClick={handleProductRoute}>
         {currency} {price.toLocaleString()}
       </ProductPriceStyle>

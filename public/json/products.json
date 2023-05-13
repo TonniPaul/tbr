@@ -8,7 +8,7 @@
     "categories": "Shirt",
     "brand": "Brand Name",
     "inventory": {
-      "stock": 35,
+      "stock": 0,
       "availability": true
     },
     "images": "/assets/product1.jpg"

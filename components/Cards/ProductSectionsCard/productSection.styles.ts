@@ -11,7 +11,7 @@ export const SectionCardStyle = styled.div`
     flex-wrap: wrap;
     column-gap: 10px;
     row-gap: 20px;
-    /* padding: 1rem; */
+    margin-bottom: 3rem;
 
     @media (min-width: 768px) {
       gap: 20px;

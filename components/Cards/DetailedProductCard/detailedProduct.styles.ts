@@ -42,25 +42,36 @@ export const DetailedProductDataStyle = styled.div`
   padding: 1.5rem 0;
   flex-basis: 400px;
 
+  & > small {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--dark-grey);
+  }
+
+  & > small:nth-of-type(2) {
+    color: var(--yellow);
+  }
+
   & > button {
     padding: 0.5rem 2rem;
+    margin: 0;
   }
 
   @media (min-width: 768px) {
     padding: 0;
   }
 
-  & p:first-child {
+  & p:nth-of-type(1) {
     font-size: 1.125rem;
     font-weight: 700;
+    padding: 0.5rem 0;
   }
 
   & p {
     padding-bottom: 0.5rem;
   }
 
-  & p:nth-child(3) {
-    font-size: 18px;
+  & p:nth-of-type(3) {
     font-weight: 600;
   }
 `;

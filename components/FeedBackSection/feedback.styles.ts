@@ -15,15 +15,12 @@ export const TestimonyContainer = styled.section`
     z-index: 1;
     background: var(--light-grey);
     z-index: -1;
+    border-top-right-radius: 500px;
+    border-top-left-radius: 500px;
 
     @media (min-width: 768px) {
       height: 80px;
     }
-  }
-  &::before,
-  &::after {
-    border-top-right-radius: 500px;
-    border-top-left-radius: 500px;
   }
 
   &::before {
@@ -56,7 +53,7 @@ export const TestimonyContainer = styled.section`
       width: 60%;
       height: 70px;
       z-index: 1;
-      background: var(--light-grey);
+      background: var(--red) !important;
       z-index: 1;
       border-radius: 50%;
       transform: translateX(-50%);

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Link from "next/link";
 export const ProductCardContainerStyle = styled.div`
   padding: 10px;
   text-align: center;
@@ -18,10 +18,11 @@ export const ProductCardContainerStyle = styled.div`
   }
 `;
 
-export const ProductCardImageContainer = styled.div`
+export const ProductCardImageContainer = styled(Link)`
   width: 140px;
   height: 140px;
   z-index: 0;
+  display: block;
 
   & img {
     width: 100%;
@@ -39,7 +40,7 @@ export const ProductCardImageContainer = styled.div`
   }
 `;
 
-export const ProductTitleStyle = styled.p`
+export const ProductTitleStyle = styled(Link)`
   font-weight: 900;
   text-transform: uppercase;
   overflow: hidden;
@@ -47,6 +48,7 @@ export const ProductTitleStyle = styled.p`
   text-overflow: ellipsis;
   width: 140px;
   margin: auto;
+  display: block;
 
   &:hover {
     white-space: normal;
