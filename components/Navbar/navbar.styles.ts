@@ -113,14 +113,11 @@ export const NavLinksStyle = styled.li<{ isActive: boolean }>`
   color: ${({ isActive }) => (isActive ? "var(--yellow)" : "(--white)")};
 
   @media (max-width: 768px) {
-    background: ${({ isActive }) => (isActive ? "var(--white)" : "none")};
-    border: ${({ isActive }) => (isActive ? "2px solid" : "none")};
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+    border: none;
+
     display: flex;
     flex-wrap: wrap;
-    scale: ${({ isActive }) => (isActive ? 1.2 : 1)};
+    scale: ${({ isActive }) => (isActive ? 1.3 : 1)};
   }
 
   & > a {
