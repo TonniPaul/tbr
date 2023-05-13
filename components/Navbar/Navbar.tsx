@@ -11,9 +11,13 @@ import {
   NavLinksStyle,
   NavContainer,
 } from "./navbar.styles";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isPageActive, setIsPageActive] = useState<boolean>();
+
+  const router = useRouter();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -55,7 +59,10 @@ const Navbar = () => {
 
             {linkData.map((data) => {
               return (
-                <NavLinksStyle key={data.id}>
+                <NavLinksStyle
+                  isActive={router.pathname === data.link}
+                  key={data.id}
+                >
                   <Link href={data.link} onClick={handleClose}>
                     <Image
                       src={data.icon}

@@ -3,24 +3,24 @@
     "id": "1212",
     "link": "/",
     "placeholder": "Home",
-    "icon": "/assets/home-icon.svg"
+    "icon": "/assets/home.png"
   },
   {
     "id": "1282",
     "link": "/shop",
     "placeholder": "Shop",
-    "icon": "/assets/shop-icon.svg"
+    "icon": "/assets/shopping-basket.png"
   },
   {
     "id": "12sjb",
     "link": "/about",
     "placeholder": "About Us",
-    "icon": "/assets/newspaper.svg"
+    "icon": "/assets/information.png"
   },
   {
     "id": "1727",
     "link": "/contact",
     "placeholder": "Contact Us",
-    "icon": "/assets/call_icon.svg"
+    "icon": "/assets/contact.png"
   }
 ]

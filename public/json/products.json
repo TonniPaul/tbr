@@ -11,7 +11,7 @@
       "stock": 0,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/Cloth-1.png"
   },
   {
     "id": "DEF456",
@@ -25,7 +25,7 @@
       "stock": 20,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/Cloth-2.png"
   },
   {
     "id": "GHI789",
@@ -140,7 +140,7 @@
       "stock": 7,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/Cloth-2.png"
   },
   {
     "id": "HIJ456",

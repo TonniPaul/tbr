@@ -106,11 +106,21 @@ export const NavUl = styled.ul<NavUlProps>`
   }
 `;
 
-export const NavLinksStyle = styled.li`
-  &:hover {
-    transition: var(--short-transition);
-    border-bottom: 2px solid var(--yellow);
-    scale: 1.1;
+export const NavLinksStyle = styled.li<{ isActive: boolean }>`
+  transition: var(--short-transition);
+  border-bottom: ${({ isActive }) =>
+    isActive ? "2px solid var(--yellow)" : "2px solid (--black)"};
+  color: ${({ isActive }) => (isActive ? "var(--yellow)" : "(--white)")};
+
+  @media (max-width: 768px) {
+    background: ${({ isActive }) => (isActive ? "var(--white)" : "none")};
+    border: ${({ isActive }) => (isActive ? "2px solid" : "none")};
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    scale: ${({ isActive }) => (isActive ? 1.2 : 1)};
   }
 
   & > a {
@@ -121,7 +131,8 @@ export const NavLinksStyle = styled.li`
   & a img {
     display: block;
     margin: 10px auto;
-    filter: var(--white-filter);
+    filter: ${({ isActive }) =>
+      isActive ? "var(--yellow-filter)" : "var(--white-filter)"};
 
     @media (min-width: 768px) {
       display: none;

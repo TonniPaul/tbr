@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
   --short-transition: 0.5s ease-in-out;
   --box_shadow: 0px 2px 5px rgba(99,99,99,.4);
   --white-filter: invert(100%) sepia(6%) saturate(270%) hue-rotate(337deg) brightness(112%) contrast(100%);
+  --yellow-filter: invert(89%) sepia(15%) saturate(6325%) hue-rotate(336deg) brightness(101%) contrast(96%);
 }
 
 *, *::after, *::before {
