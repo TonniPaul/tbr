@@ -10,7 +10,7 @@ import { AllProducts, MyProductProps } from "@/interface/AllProduct";
 import { ActionButtonStyle } from "@/styles/globals.styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { fetchProducts } from "../staticProp";
+import { fetchProducts } from "../api/staticProp";
 import { GetStaticPropsContext } from "next";
 import { useState, useEffect } from "react";
 import NoFooterLayout from "@/components/Layout/noFooterLayout";

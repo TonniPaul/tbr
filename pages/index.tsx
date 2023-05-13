@@ -3,7 +3,7 @@ import Hero from "@/components/Hero/Hero";
 import FeedBackSection from "@/components/FeedBackSection/FeedBackSection";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout/layout";
-import { fetchProducts } from "./staticProp";
+import { fetchProducts } from "./api/staticProp";
 import { MyProductProps } from "@/interface/AllProduct";
 
 export default function Home({ products }: MyProductProps) {

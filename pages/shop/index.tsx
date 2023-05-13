@@ -5,7 +5,7 @@ import { MyProductProps } from "@/interface/AllProduct";
 import SearchFilter from "@/components/SearchFilter/SearchFilter";
 import ProductId from "./[id]";
 import Layout from "@/components/Layout/layout";
-import { fetchProducts } from "../staticProp";
+import { fetchProducts } from "../api/staticProp";
 
 const Shop = ({ products }: MyProductProps) => {
   return (
