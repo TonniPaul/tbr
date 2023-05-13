@@ -21,6 +21,7 @@ export const GoBackButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: var(--border_radius_small);
   margin-bottom: 1rem;
+  color: var(--black);
 
   & span {
     font-size: 20px;
@@ -38,18 +39,18 @@ export const DetailedProductImage = styled.div`
   }
 `;
 
-export const DetailedProductDataStyle = styled.div`
+export const DetailedProductDataStyle = styled.div<{ color: string }>`
   padding: 1.5rem 0;
   flex-basis: 400px;
 
   & > small {
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--dark-grey);
+    color: var(--yellow);
   }
 
   & > small:nth-of-type(2) {
-    color: var(--yellow);
+    color: ${({ color }) => color};
   }
 
   & > button {
