@@ -4,4 +4,5 @@ export interface ProductCardProps {
   title: string;
   price: number;
   currency: string;
+  stock: number;
 }

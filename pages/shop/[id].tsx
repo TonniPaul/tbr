@@ -83,7 +83,13 @@ const ProductId = ({ products }: MyProductProps) => {
                     height={600}
                   />
                 </DetailedProductImage>
-                <DetailedProductDataStyle>
+                <DetailedProductDataStyle
+                  color={
+                    products.inventory.stock === 0
+                      ? "var(--red)"
+                      : "var(--yellow)"
+                  }
+                >
                   <small>CATEGORY: {products.categories} </small>
                   <p>{products.name} </p>
                   <p>{products.description}</p>
@@ -94,7 +100,7 @@ const ProductId = ({ products }: MyProductProps) => {
                     {" "}
                     {products.inventory.stock === 0
                       ? "OUT OF STOCK"
-                      : `STOCK:${products.inventory.stock}`}{" "}
+                      : `STOCK: ${products.inventory.stock}`}
                   </small>
                   <Count />
                   <ActionButtonStyle
@@ -107,7 +113,7 @@ const ProductId = ({ products }: MyProductProps) => {
                 </DetailedProductDataStyle>
               </div>
             );
-          })[0]
+          })[1]
         }
       </DetailedProductContainer>
     </NoFooterLayout>

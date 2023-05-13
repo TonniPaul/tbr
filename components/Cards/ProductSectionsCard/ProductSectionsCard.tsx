@@ -18,6 +18,7 @@ const ProductSectionsCard = ({ title, product }: ProductSectionProps) => {
               title={productData.name}
               price={productData.price}
               currency={productData.currency}
+              stock={productData.inventory.stock}
             />
           );
         })}

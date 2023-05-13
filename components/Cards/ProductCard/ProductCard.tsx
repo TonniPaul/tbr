@@ -18,6 +18,7 @@ const ProductCard = ({
   price,
   id,
   currency,
+  stock,
 }: ProductCardProps) => {
   const [showToast, setShowToast] = useState(false);
   const router = useRouter();
@@ -63,8 +64,8 @@ const ProductCard = ({
         <span>Add to Cart</span>
       </ActionButtonStyle>
       <Toast
-        status="Success"
-        message="Added To cart 😊"
+        status={stock === 0 ? "Failed" : "Success"}
+        message={stock === 0 ? "Out of Stock 😞" : "Added to Cart 😊"}
         isVisible={showToast}
       />
     </ProductCardContainerStyle>
