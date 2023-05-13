@@ -5,7 +5,7 @@ import { MyProductProps } from "@/interface/AllProduct";
 import SearchFilter from "@/components/SearchFilter/SearchFilter";
 import ProductId from "./[id]";
 import Layout from "@/components/Layout/layout";
-import { fetchProducts } from "../api/staticProp";
+import { fetchProducts } from "../../fetcher/staticProp";
 
 const Shop = ({ products }: MyProductProps) => {
   return (
@@ -22,7 +22,6 @@ const Shop = ({ products }: MyProductProps) => {
             }}
           />
           <ProductSectionsCard product={products} />
-          <ProductId products={products} />
         </ShopPageStyles>
       </Layout>
     </>

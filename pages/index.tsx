@@ -3,16 +3,10 @@ import Hero from "@/components/Hero/Hero";
 import FeedBackSection from "@/components/FeedBackSection/FeedBackSection";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout/layout";
-import { fetchProducts } from "./api/staticProp";
+import { fetchProducts } from "../fetcher/staticProp";
 import { MyProductProps } from "@/interface/AllProduct";
 
 export default function Home({ products }: MyProductProps) {
-  const router = useRouter();
-
-  const handleProductRoute = (productId: string) => {
-    router.push(`/shop/${productId}`);
-  };
-
   return (
     <>
       <Layout title="Home">

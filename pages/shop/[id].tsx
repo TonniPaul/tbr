@@ -10,10 +10,11 @@ import { AllProducts, MyProductProps } from "@/interface/AllProduct";
 import { ActionButtonStyle } from "@/styles/globals.styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { fetchProducts } from "../api/staticProp";
-import { GetStaticPropsContext } from "next";
-import { useState, useEffect } from "react";
+import { fetchProducts } from "@/fetcher/staticProp";
+import { GetStaticPropsContext, NextPage } from "next";
+import { useState, useEffect, FC } from "react";
 import NoFooterLayout from "@/components/Layout/noFooterLayout";
+import { getProductById } from "@/fetcher/staticProp";
 
 export const getStaticPaths = async () => {
   const products = await fetchProducts();
@@ -31,20 +32,19 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const id = context.params?.id;
-  const res = await fetch(`https://tbr.tonnipaul.com/api/products/`);
+  const id = (context.params?.id || "") as string;
+  const data = getProductById(id);
 
-  const data = await res.json();
-  console.log(data, id);
+  // console.log('data', data, id);
 
   return {
     props: {
-      products: data,
+      product: data,
     },
   };
 };
 
-const ProductId = ({ products }: MyProductProps) => {
+const ProductId = ({ product }: { product: AllProducts }) => {
   const [showToast, setShowToast] = useState<boolean>(false);
 
   useEffect(() => {
@@ -71,50 +71,42 @@ const ProductId = ({ products }: MyProductProps) => {
         <GoBackButton onClick={handleGoBack}>
           <span>&larr; </span> Go Back
         </GoBackButton>
-        {
-          products.map((products) => {
-            return (
-              <div key={products.id}>
-                <DetailedProductImage>
-                  <Image
-                    src={products.images}
-                    alt={`${products.name} image`}
-                    width={500}
-                    height={600}
-                  />
-                </DetailedProductImage>
-                <DetailedProductDataStyle
-                  color={
-                    products.inventory.stock === 0
-                      ? "var(--red)"
-                      : "var(--yellow)"
-                  }
-                >
-                  <small>CATEGORY: {products.categories} </small>
-                  <p>{products.name} </p>
-                  <p>{products.description}</p>
-                  <p>
-                    {products.currency} {products.price.toLocaleString()}
-                  </p>
-                  <small>
-                    {" "}
-                    {products.inventory.stock === 0
-                      ? "OUT OF STOCK"
-                      : `STOCK: ${products.inventory.stock}`}
-                  </small>
-                  <Count />
-                  <ActionButtonStyle
-                    onClick={handleCartClick}
-                    disabled={products.inventory.stock === 0 ? true : false}
-                  >
-                    Add to Cart
-                  </ActionButtonStyle>
-                  <Toast message={"Added to Cart 😊"} isVisible={showToast} />
-                </DetailedProductDataStyle>
-              </div>
-            );
-          })[1]
-        }
+        <div>
+          <DetailedProductImage>
+            <Image
+              src={product.images}
+              alt={`${product.name} image`}
+              width={500}
+              height={600}
+            />
+          </DetailedProductImage>
+          <DetailedProductDataStyle
+            color={
+              product.inventory.stock === 0 ? "var(--red)" : "var(--yellow)"
+            }
+          >
+            <small>CATEGORY: {product.categories} </small>
+            <p>{product.name} </p>
+            <p>{product.description}</p>
+            <p>
+              {product.currency} {product.price.toLocaleString()}
+            </p>
+            <small>
+              {" "}
+              {product.inventory.stock === 0
+                ? "OUT OF STOCK"
+                : `STOCK: ${product.inventory?.stock}`}
+            </small>
+            <Count />
+            <ActionButtonStyle
+              onClick={handleCartClick}
+              disabled={product.inventory?.stock === 0 ? true : false}
+            >
+              Add to Cart
+            </ActionButtonStyle>
+            <Toast message={"Added to Cart 😊"} isVisible={showToast} />
+          </DetailedProductDataStyle>
+        </div>
       </DetailedProductContainer>
     </NoFooterLayout>
   );
