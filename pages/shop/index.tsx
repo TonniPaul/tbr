@@ -3,39 +3,34 @@ import Loader from "@/components/Loader/Loader";
 import { ShopPageStyles } from "@/styles/shop.styles";
 import { MyProductProps } from "@/interface/AllProduct";
 import SearchFilter from "@/components/SearchFilter/SearchFilter";
-import Head from "next/head";
+import ProductId from "./[id]";
+import Layout from "@/components/Layout/layout";
+import { fetchProducts } from "../staticProp";
 
 const Shop = ({ products }: MyProductProps) => {
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="The best thrift clothing and accessories are handpicked especially for you."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon.jpg" />
-        <title>Shop Page</title>
-      </Head>
-
-      <ShopPageStyles>
-        <SearchFilter
-          handleFilterByCategory={(e) => {}}
-          onChange={function (searchValue: string, filterValue: string): void {
-            throw new Error("Function not implemented.");
-          }}
-        />
-        <ProductSectionsCard product={products} />
-      </ShopPageStyles>
+      <Layout title={"Shop"}>
+        <ShopPageStyles>
+          <SearchFilter
+            handleFilterByCategory={(e) => {}}
+            onChange={function (
+              searchValue: string,
+              filterValue: string
+            ): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+          <ProductSectionsCard product={products} />
+          <ProductId products={products} />
+        </ShopPageStyles>
+      </Layout>
     </>
   );
 };
 
-export default Shop;
-
 export async function getStaticProps() {
-  const res = await fetch("https://tbr.tonnipaul.com//api/products");
-  const products = await res.json();
+  const products = await fetchProducts();
 
   return {
     props: {
@@ -43,3 +38,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Shop;

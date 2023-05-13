@@ -1,15 +1,16 @@
+import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import {
   ProductCardContainerStyle,
   ProductCardImageContainer,
   ProductPriceStyle,
   ProductTitleStyle,
 } from "./productCard.styles";
-import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
+import { ActionButtonStyle } from "@/styles/globals.styles";
 import { ProductCardProps } from "@/interface/ProductCardProps";
-import { useRouter } from "next/router";
 import Toast from "@/components/Toast/Toast";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const ProductCard = ({
   image,
@@ -19,6 +20,7 @@ const ProductCard = ({
   currency,
 }: ProductCardProps) => {
   const [showToast, setShowToast] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,12 +30,8 @@ const ProductCard = ({
     return () => clearTimeout(timer);
   }, [showToast]);
 
-  const productRoute = useRouter();
-
-  const productId = id;
-
   const handleProductRoute = () => {
-    productRoute.push(`/shop/${productId}`);
+    router.push(`/product/${id}`);
   };
 
   const handleAddToCart = () => {
@@ -49,7 +47,6 @@ const ProductCard = ({
           width={250}
           height={250}
           onClick={handleProductRoute}
-          // priority
         />
       </ProductCardImageContainer>
       <ProductTitleStyle onClick={handleProductRoute}>

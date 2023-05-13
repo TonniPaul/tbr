@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const CartMainContainer = styled.div`
   background: var(--light-grey);
+  min-height: calc(100vh);
+
   padding: 1rem;
 
   @media (min-width: 600px) {
@@ -21,6 +23,8 @@ export const CartItemsContainer = styled.div`
   padding: 1rem;
   border-radius: var(--border_radius_small);
   position: relative;
+  height: max-content;
+  max-width: 1440px;
 
   @media (min-width: 550px) {
     flex-basis: 60%;
@@ -84,6 +88,7 @@ export const CartItemsData = styled.div`
   & > button {
     @media (min-width: 768px) {
       padding: 0.5rem 2rem;
+      background: green !important;
     }
   }
 `;

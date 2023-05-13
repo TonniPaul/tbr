@@ -8,6 +8,7 @@ export const rotate = keyframes`
 
 export const LoaderContainer = styled.div`
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +16,7 @@ export const LoaderContainer = styled.div`
   overflow: hidden;
   position: fixed;
   top: 0;
+  z-index: 7;
 
   & p {
     font-style: italic;

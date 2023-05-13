@@ -7,6 +7,7 @@ export const SearchFilterStyles = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   position: relative;
+  padding: 0 2rem;
 
   & > div {
     border-radius: 5px;
@@ -53,11 +54,13 @@ export const FilterByCategoryStyle = styled.div<{ isOpen: boolean }>`
 
   & > div:nth-child(2) {
     position: absolute;
-    bottom: -135px;
+    bottom: -140px;
     z-index: 5;
     background: var(--light-grey);
     width: 200px;
     transition: var(--short-transition);
+    border-radius: 5px;
+    overflow: hidden;
 
     opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
 
