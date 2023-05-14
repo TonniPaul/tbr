@@ -48,7 +48,9 @@ export const DetailedProductDataStyle = styled.div<{ color: string }>`
     font-weight: 700;
     color: var(--yellow);
   }
-
+  & > small:nth-of-type(1) {
+    color: var(--dark-grey);
+  }
   & > small:nth-of-type(2) {
     color: ${({ color }) => color};
   }

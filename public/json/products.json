@@ -9,7 +9,7 @@
     "brand": "Brand Name",
     "inventory": {
       "stock": 0,
-      "availability": true
+      "availability": false
     },
     "images": "/assets/Cloth-1.png"
   },
