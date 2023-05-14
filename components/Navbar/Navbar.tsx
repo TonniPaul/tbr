@@ -45,7 +45,7 @@ const Navbar = () => {
       </div>
       <NavContainer>
         <nav>
-          <button onClick={handleClick}>
+          <button onClick={handleClick} aria-label="nav-menu">
             <Image src="/assets/menu.svg" alt="" width={20} height={20} />
           </button>
 
