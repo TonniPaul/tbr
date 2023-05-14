@@ -6,43 +6,14 @@ import {
   GoBackButton,
 } from "@/components/Cards/DetailedProductCard/detailedProduct.styles";
 import Toast from "@/components/Toast/Toast";
-import { AllProducts, MyProductProps } from "@/interface/AllProduct";
+import { AllProducts } from "@/interface/AllProduct";
 import { ActionButtonStyle } from "@/styles/globals.styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { fetchProducts } from "@/fetcher/staticProp";
-import { GetStaticPropsContext, NextPage } from "next";
-import { useState, useEffect, FC } from "react";
+import { fetchProductId, fetchProducts } from "@/fetcher/fetcher";
+import { GetStaticPropsContext } from "next";
+import { useState, useEffect } from "react";
 import NoFooterLayout from "@/components/Layout/noFooterLayout";
-import { getProductById } from "@/fetcher/staticProp";
-
-export const getStaticPaths = async () => {
-  const products = await fetchProducts();
-
-  const paths = products.map((product: AllProducts) => {
-    return {
-      params: { id: product.id.toString() },
-    };
-  });
-
-  return {
-    paths: paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const id = (context.params?.id || "") as string;
-  const data = getProductById(id);
-
-  // console.log('data', data, id);
-
-  return {
-    props: {
-      product: data,
-    },
-  };
-};
 
 const ProductId = ({ product }: { product: AllProducts }) => {
   const [showToast, setShowToast] = useState<boolean>(false);
@@ -113,3 +84,29 @@ const ProductId = ({ product }: { product: AllProducts }) => {
 };
 
 export default ProductId;
+
+export const getStaticPaths = async () => {
+  const products = await fetchProducts();
+
+  const paths = products.map((product: AllProducts) => {
+    return {
+      params: { id: product.id.toString() },
+    };
+  });
+
+  return {
+    paths: paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
+  const productId = params?.id as string;
+  const product = fetchProductId(productId);
+
+  return {
+    props: {
+      product,
+    },
+  };
+};

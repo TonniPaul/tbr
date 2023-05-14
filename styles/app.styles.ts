@@ -4,7 +4,9 @@ const GlobalStyles = createGlobalStyle`
 
 @font-face {
   font-family: "AmsterdamOne";
-  src: url('/fonts/AmsterdamOne-eZ12l.ttf');
+  font-style: normal;
+  src: url('/fonts/AmsterdamOne-eZ12l.ttf')format('ttf');
+  font-display: swap;
 }
 
   :root {

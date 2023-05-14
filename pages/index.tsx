@@ -1,9 +1,8 @@
 import ProductSectionsCard from "@/components/Cards/ProductSectionsCard/ProductSectionsCard";
 import Hero from "@/components/Hero/Hero";
 import FeedBackSection from "@/components/FeedBackSection/FeedBackSection";
-import { useRouter } from "next/router";
 import Layout from "@/components/Layout/layout";
-import { fetchProducts } from "../fetcher/staticProp";
+import { fetchProducts } from "../fetcher/fetcher";
 import { MyProductProps } from "@/interface/AllProduct";
 
 export default function Home({ products }: MyProductProps) {
