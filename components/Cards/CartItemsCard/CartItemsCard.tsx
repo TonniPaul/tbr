@@ -10,10 +10,20 @@ import React, { useEffect, useState } from "react";
 import Count from "../CountComponent/Count";
 
 interface CartCardProps {
+  image: string;
+  name: string;
+  price: number;
+  quantity: number;
   onConfirmClick: () => void;
 }
 
-const CartItemsCard = ({ onConfirmClick }: CartCardProps) => {
+const CartItemsCard = ({
+  image,
+  name,
+  price,
+  quantity,
+  onConfirmClick,
+}: CartCardProps) => {
   const [isRemoving, setIsRemoving] = useState<boolean>(false);
 
   const handleRemoveClick = () => {

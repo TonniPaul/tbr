@@ -11,17 +11,13 @@ import { ActionButtonStyle } from "@/styles/globals.styles";
 import { ProductCardProps } from "@/interface/ProductCardProps";
 import Toast from "@/components/Toast/Toast";
 import { useEffect } from "react";
+import { useStore } from "@/store";
+import { AllProducts } from "@/interface/AllProduct";
 
-const ProductCard = ({
-  image,
-  title,
-  price,
-  id,
-  currency,
-  stock,
-}: ProductCardProps) => {
+const ProductCard = (product: AllProducts) => {
   const [showToast, setShowToast] = useState(false);
   const router = useRouter();
+  const { addToCart } = useStore();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,27 +28,30 @@ const ProductCard = ({
   }, [showToast]);
 
   const handleProductRoute = () => {
-    router.push(`/shop/${id}`);
+    router.push(`/shop/${product.id}`);
   };
 
   const handleAddToCart = () => {
+    addToCart({ ...product, quantity: 0 });
     setShowToast(true);
   };
 
   return (
     <ProductCardContainerStyle>
-      <ProductCardImageContainer href={`shop/${id}`}>
+      <ProductCardImageContainer href={`shop/${product.id}`}>
         <Image
-          src={image}
-          alt={`${title} image`}
+          src={product.images}
+          alt={`${product.name} image`}
           width={250}
           height={250}
           onClick={handleProductRoute}
         />
       </ProductCardImageContainer>
-      <ProductTitleStyle href={`shop/${id}`}>{title}</ProductTitleStyle>
+      <ProductTitleStyle href={`shop/${product.id}`}>
+        {product.name}
+      </ProductTitleStyle>
       <ProductPriceStyle onClick={handleProductRoute}>
-        {currency} {price.toLocaleString()}
+        {product.currency} {product.price.toLocaleString()}
       </ProductPriceStyle>
       <ActionButtonStyle onClick={handleAddToCart}>
         <Image
@@ -64,8 +63,10 @@ const ProductCard = ({
         <span>Add to Cart</span>
       </ActionButtonStyle>
       <Toast
-        status={stock === 0 ? "Failed" : "Success"}
-        message={stock === 0 ? "Out of Stock 😞" : "Added to Cart 😊"}
+        status={product.inventory.stock === 0 ? "Failed" : "Success"}
+        message={
+          product.inventory.stock === 0 ? "Out of Stock 😞" : "Added to Cart 😊"
+        }
         isVisible={showToast}
       />
     </ProductCardContainerStyle>

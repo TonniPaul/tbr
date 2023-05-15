@@ -88,7 +88,7 @@ export const CartItemsData = styled.div`
   & > button {
     @media (min-width: 768px) {
       padding: 0.5rem 2rem;
-      background: green !important;
+      /* background: green !important; */
     }
   }
 `;

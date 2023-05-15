@@ -1,9 +1,7 @@
 import ProductSectionsCard from "@/components/Cards/ProductSectionsCard/ProductSectionsCard";
-import Loader from "@/components/Loader/Loader";
 import { ShopPageStyles } from "@/styles/shop.styles";
 import { MyProductProps } from "@/interface/AllProduct";
 import SearchFilter from "@/components/SearchFilter/SearchFilter";
-import ProductId from "./[id]";
 import Layout from "@/components/Layout/layout";
 import { fetchProducts } from "../../fetcher/fetcher";
 

@@ -12,10 +12,11 @@ import {
   NavContainer,
 } from "./navbar.styles";
 import { useRouter } from "next/router";
+import { useStore } from "@/store";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isPageActive, setIsPageActive] = useState<boolean>();
+  const { cart } = useStore();
 
   const router = useRouter();
 
@@ -85,7 +86,7 @@ const Navbar = () => {
                 width={20}
                 height={20}
               />
-              <p>1</p>
+              <p>{cart.length} </p>
             </Link>
           </CartButton>
         </nav>

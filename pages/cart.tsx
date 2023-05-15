@@ -3,6 +3,7 @@ import Count from "@/components/Cards/CountComponent/Count";
 import SubTotal from "@/components/Cards/Subtotal/SubTotal";
 import NoFooterLayout from "@/components/Layout/noFooterLayout";
 import Toast from "@/components/Toast/Toast";
+import { useStore } from "@/store";
 import {
   CartImageContainer,
   CartItems,
@@ -22,6 +23,8 @@ const CartPage = () => {
   const [isDeleted, setIsDeleted] = useState<boolean>(false);
   const items = 2;
 
+  const { cart } = useStore();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsDeleted(false);
@@ -38,12 +41,23 @@ const CartPage = () => {
     <>
       <NoFooterLayout>
         <CartMainContainer>
-          {items > 0 ? (
+          {cart.length > 0 ? (
             <CartItemsContainer>
               <p>Your Shopping Cart</p>
 
               <div>
-                <CartItemsCard onConfirmClick={handleConfirmClick} />
+                {cart.map((cartItems) => {
+                  return (
+                    <CartItemsCard
+                      key={cartItems.id}
+                      image={cartItems.images}
+                      price={cartItems.price}
+                      quantity={cartItems.quantity}
+                      name={cartItems.name}
+                      onConfirmClick={handleConfirmClick}
+                    />
+                  );
+                })}
               </div>
               <Toast
                 message={"Removed From Cart 😔"}

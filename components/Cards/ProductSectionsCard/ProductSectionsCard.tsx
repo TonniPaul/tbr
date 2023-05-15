@@ -14,11 +14,17 @@ const ProductSectionsCard = ({ title, product }: ProductSectionProps) => {
             <ProductCard
               key={productData.id}
               id={productData.id}
-              image={productData.images}
-              title={productData.name}
+              images={productData.images}
+              name={productData.name}
               price={productData.price}
               currency={productData.currency}
-              stock={productData.inventory.stock}
+              description={productData.description}
+              categories={productData.categories}
+              brand={productData.brand}
+              inventory={{
+                stock: productData.inventory.stock,
+                availability: productData.inventory.availability,
+              }}
             />
           );
         })}
