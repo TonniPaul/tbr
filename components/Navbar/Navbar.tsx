@@ -33,16 +33,22 @@ const Navbar = () => {
   }, [isOpen]);
 
   const handleClose = () => setIsOpen(false);
+
+  const handleCartRoute = () => {
+    router.push("/cart");
+  };
   return (
     <HeaderStyle>
       <div>
-        <Image
-          src={"/assets/call_icon.svg"}
-          alt="call_icon"
-          width={20}
-          height={20}
-        />
-        <a href="tel:+2348087943172">customer care line : +234 808 794 3172</a>
+        <a href="tel:+2348087943172">
+          <Image
+            src={"/assets/telephone-call.png"}
+            alt="call_icon"
+            width={20}
+            height={20}
+          />
+          customer care line : +234 808 794 3172
+        </a>
       </div>
       <NavContainer>
         <nav>
@@ -78,16 +84,16 @@ const Navbar = () => {
             })}
           </NavUl>
 
-          <CartButton>
-            <Link href="/cart">
-              <Image
-                src="/assets/cart-icon.svg"
-                alt="cart_icon"
-                width={20}
-                height={20}
-              />
-              <p>{cart.length} </p>
-            </Link>
+          <CartButton onClick={handleCartRoute}>
+            {/* <Link href="/cart"> */}
+            <Image
+              src="/assets/cart-icon.svg"
+              alt="cart_icon"
+              width={20}
+              height={20}
+            />
+            <p>{cart.length} </p>
+            {/* </Link> */}
           </CartButton>
         </nav>
       </NavContainer>

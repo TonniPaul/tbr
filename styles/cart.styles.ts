@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const CartMainContainer = styled.div`
   background: var(--light-grey);
-  min-height: calc(100vh);
 
   padding: 1rem;
 

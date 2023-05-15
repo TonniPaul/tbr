@@ -23,7 +23,7 @@ const CartPage = () => {
   const [isDeleted, setIsDeleted] = useState<boolean>(false);
   const items = 2;
 
-  const { cart } = useStore();
+  const { cart, removeFromCart } = useStore();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,6 +34,7 @@ const CartPage = () => {
   }, [isDeleted]);
 
   const handleConfirmClick = () => {
+    removeFromCart;
     setIsDeleted(true);
   };
 
@@ -55,6 +56,8 @@ const CartPage = () => {
                       quantity={cartItems.quantity}
                       name={cartItems.name}
                       onConfirmClick={handleConfirmClick}
+                      currency={cartItems.currency}
+                      id={cartItems.id}
                     />
                   );
                 })}

@@ -18,7 +18,7 @@ export const ProductCardContainerStyle = styled.div`
   }
 `;
 
-export const ProductCardImageContainer = styled(Link)`
+export const ProductCardImageContainer = styled.div`
   width: 140px;
   height: 140px;
   z-index: 0;
@@ -40,7 +40,7 @@ export const ProductCardImageContainer = styled(Link)`
   }
 `;
 
-export const ProductTitleStyle = styled(Link)`
+export const ProductTitleStyle = styled.div`
   font-weight: 900;
   text-transform: uppercase;
   overflow: hidden;

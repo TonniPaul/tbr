@@ -14,7 +14,7 @@ const Toast = ({ message, isVisible, status }: ToastProps) => {
     <>
       {isVisible && (
         <ToastContainer>
-          <p>{status ? status : "Success 😊"}</p>
+          <p>{status ? status : "Success"}</p>
           <p>{message}</p>
         </ToastContainer>
       )}

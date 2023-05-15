@@ -14,9 +14,13 @@ import { fetchProductId, fetchProducts } from "@/fetcher/fetcher";
 import { GetStaticPropsContext } from "next";
 import { useState, useEffect } from "react";
 import NoFooterLayout from "@/components/Layout/noFooterLayout";
+import { useStore } from "@/store";
+import Loader from "@/components/Loader/Loader";
 
 const ProductId = ({ product }: { product: AllProducts }) => {
   const [showToast, setShowToast] = useState<boolean>(false);
+  const { addToCart } = useStore();
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,18 +30,21 @@ const ProductId = ({ product }: { product: AllProducts }) => {
     return () => clearTimeout(timer);
   }, [showToast]);
 
-  const goBack = useRouter();
+  if (router.isFallback) {
+    return <Loader />;
+  }
 
   const handleGoBack = () => {
-    goBack.back();
+    router.back();
   };
 
   const handleCartClick = () => {
+    addToCart({ ...product, quantity: 0 });
     setShowToast(true);
   };
 
   return (
-    <NoFooterLayout>
+    <NoFooterLayout title={product.name}>
       <DetailedProductContainer>
         <GoBackButton onClick={handleGoBack}>
           <span>&larr; </span> Go Back
@@ -96,13 +103,19 @@ export const getStaticPaths = async () => {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   const productId = params?.id as string;
-  const product = fetchProductId(productId);
+  const product = (await fetchProductId(productId)) || null;
+
+  if (!product?.id) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

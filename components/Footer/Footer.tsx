@@ -61,6 +61,14 @@ const Footer = () => {
                 height={20}
               />
             </a>
+            <a href="tel:+2348087943172">
+              <Image
+                src={"/assets/telephone-call.png"}
+                alt="twitter-logo"
+                width={20}
+                height={20}
+              />
+            </a>
           </SocialLinksContainer>
         </FooterSections>
       </div>

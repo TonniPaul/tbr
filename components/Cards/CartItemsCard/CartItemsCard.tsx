@@ -8,23 +8,29 @@ import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Count from "../CountComponent/Count";
+import { useStore } from "@/store";
 
 interface CartCardProps {
+  id: string;
   image: string;
   name: string;
   price: number;
   quantity: number;
+  currency: string;
   onConfirmClick: () => void;
 }
 
 const CartItemsCard = ({
+  id,
   image,
   name,
   price,
   quantity,
   onConfirmClick,
+  currency,
 }: CartCardProps) => {
   const [isRemoving, setIsRemoving] = useState<boolean>(false);
+  const { removeFromCart } = useStore();
 
   const handleRemoveClick = () => {
     setIsRemoving(true);
@@ -36,22 +42,20 @@ const CartItemsCard = ({
 
   const handleConfirmClick = () => {
     setIsRemoving(false);
+    removeFromCart(id);
     onConfirmClick();
   };
   return (
     <CartItems>
       <CartImageContainer>
-        <Image
-          src="/assets/product4.jpg"
-          alt="product-image"
-          width={300}
-          height={300}
-        />
+        <Image src={image} alt={`${name} image`} width={300} height={300} />
       </CartImageContainer>
       <CartItemsData>
-        <p> Yellow Prints Top </p>
+        <p> {name} </p>
         <p>
-          <BoldText>NGN</BoldText> 4,800
+          <BoldText>
+            {currency} {price.toLocaleString()}
+          </BoldText>
         </p>
         <Count />
 

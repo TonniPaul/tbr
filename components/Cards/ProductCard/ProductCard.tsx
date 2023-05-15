@@ -38,7 +38,7 @@ const ProductCard = (product: AllProducts) => {
 
   return (
     <ProductCardContainerStyle>
-      <ProductCardImageContainer href={`shop/${product.id}`}>
+      <ProductCardImageContainer onClick={handleProductRoute}>
         <Image
           src={product.images}
           alt={`${product.name} image`}
@@ -47,7 +47,7 @@ const ProductCard = (product: AllProducts) => {
           onClick={handleProductRoute}
         />
       </ProductCardImageContainer>
-      <ProductTitleStyle href={`shop/${product.id}`}>
+      <ProductTitleStyle onClick={handleProductRoute}>
         {product.name}
       </ProductTitleStyle>
       <ProductPriceStyle onClick={handleProductRoute}>

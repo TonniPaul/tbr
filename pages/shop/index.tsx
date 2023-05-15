@@ -26,6 +26,8 @@ const Shop = ({ products }: MyProductProps) => {
   );
 };
 
+export default Shop;
+
 export async function getStaticProps() {
   const products = await fetchProducts();
 
@@ -35,5 +37,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-export default Shop;

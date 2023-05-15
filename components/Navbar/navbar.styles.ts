@@ -11,12 +11,18 @@ export const HeaderStyle = styled.header`
   & > div:first-child {
     display: flex;
     gap: 10px;
+    font-size: 0.875rem;
     background: var(--yellow);
     color: var(--black);
     padding: 0.7rem 1rem;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+
+    & a {
+      display: flex;
+      gap: 10px;
+    }
   }
 `;
 
@@ -49,6 +55,7 @@ export const NavContainer = styled.div`
 
 export const LogoStyle = styled.p`
   font-family: var(--logo-font);
+  font-size: 14px;
 `;
 
 export const NavCloseButton = styled.button`
@@ -112,9 +119,12 @@ export const NavLinksStyle = styled.li<{ isActive: boolean }>`
     isActive ? "2px solid var(--yellow)" : "2px solid (--black)"};
   color: ${({ isActive }) => (isActive ? "var(--yellow)" : "(--white)")};
 
+  &:hover {
+    color: var(--yellow);
+  }
+
   @media (max-width: 768px) {
     border: none;
-
     display: flex;
     flex-wrap: wrap;
     scale: ${({ isActive }) => (isActive ? 1.3 : 1)};
@@ -139,23 +149,27 @@ export const NavLinksStyle = styled.li<{ isActive: boolean }>`
 `;
 
 export const CartButton = styled.div`
-  & a {
-    position: relative;
-    text-align: center;
-    margin-right: 10px;
-  }
-  & a img {
+  position: relative;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+
+  & img {
     filter: var(--white-filter);
   }
 
-  & a p {
+  & p {
     position: absolute;
     background: var(--red);
     padding: 0.2rem;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    top: -20px;
+    top: -10px;
     right: -10px;
     font-size: 10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
