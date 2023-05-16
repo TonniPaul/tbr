@@ -8,6 +8,7 @@ export interface ProductSliceType {
 }
 
 export const productSlice: StateCreator<ProductSliceType> = (set) => ({
+  // function to fetch products
   products: [],
   fetchProducts: async () => {
     const res = await fetchProducts();

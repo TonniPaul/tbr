@@ -122,3 +122,21 @@ export const ConfirmRemoveContainer = styled.div`
   display: flex;
   gap: 10px;
 `;
+
+export const ClearCartContainerStyle = styled.div`
+  padding: 1rem 0 0;
+  border-top: 2px solid var(--light-grey);
+
+  & > button {
+    padding: 0.5rem 5rem;
+  }
+
+  & > div {
+    justify-content: center !important;
+
+    & button {
+      width: 50%;
+      justify-content: center;
+    }
+  }
+`;

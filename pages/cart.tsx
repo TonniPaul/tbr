@@ -7,6 +7,8 @@ import { useStore } from "@/store";
 import {
   CartItemsContainer,
   CartMainContainer,
+  ClearCartContainerStyle,
+  ConfirmRemoveContainer,
   EmptyCartStyle,
 } from "@/styles/cart.styles";
 import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
@@ -16,13 +18,15 @@ import { useEffect, useState } from "react";
 
 const CartPage = () => {
   const [isDeleted, setIsDeleted] = useState<boolean>(false);
+  const [clearCart, setClearCart] = useState<boolean>(false);
   const router = useRouter();
-  const { cart, removeFromCart } = useStore();
+  const { cart, removeFromCart, reset } = useStore();
 
+  //Function to hide toast after 3 seconds of display
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsDeleted(false);
-    }, 4000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [isDeleted]);
@@ -65,6 +69,30 @@ const CartPage = () => {
                 status="Success"
                 isVisible={isDeleted}
               />
+              {cart.length > 1 && (
+                <ClearCartContainerStyle>
+                  {!clearCart && (
+                    <ActionButtonStyle onClick={() => setClearCart(true)}>
+                      Clear Cart
+                    </ActionButtonStyle>
+                  )}
+                  {clearCart && (
+                    <ConfirmRemoveContainer>
+                      <ActionButtonStyle
+                        onClick={() => setClearCart((prev) => !prev)}
+                      >
+                        Cancel
+                      </ActionButtonStyle>
+                      <ActionButtonStyle
+                        color={"var(--white)"}
+                        onClick={() => reset()}
+                      >
+                        Confirm
+                      </ActionButtonStyle>
+                    </ConfirmRemoveContainer>
+                  )}
+                </ClearCartContainerStyle>
+              )}
             </CartItemsContainer>
           ) : (
             <EmptyCartStyle>

@@ -11,11 +11,13 @@ export interface CartSliceType {
   addToCart: (product: CartProps) => void;
   removeFromCart: (productId: string) => void;
   updateQuantity: (productId: string, action: "increase" | "decrease") => void;
+  reset: () => void;
 }
 
 export const cartSlice: StateCreator<CartSliceType> = (set, get) => ({
   cart: [],
 
+  // function to initialize cart
   addToCart: (product: CartProps) => {
     const cart = get().cart;
     const findProduct = cart.find((p) => p.id === product.id);
@@ -29,10 +31,12 @@ export const cartSlice: StateCreator<CartSliceType> = (set, get) => ({
     console.log(cart);
   },
 
+  // function to remove single item from cart
   removeFromCart: (productId: string) => {
     set({ cart: get().cart.filter((product) => product.id !== productId) });
   },
 
+  // function to update selected product quantity
   updateQuantity: (productId: string, action: "increase" | "decrease") => {
     const cart = get().cart;
     const findProduct = cart.find((p) => p.id === productId);
@@ -46,5 +50,10 @@ export const cartSlice: StateCreator<CartSliceType> = (set, get) => ({
         findProduct.quantity! += 1;
       }
     }
+  },
+
+  // function to reset empty cart
+  reset: () => {
+    set({ cart: [] });
   },
 });
