@@ -1,18 +1,25 @@
-import { useState } from "react";
-import { PriceStyle } from "../DetailedProductCard/detailedProduct.styles";
+import { useState, useEffect } from "react";
 import { CountButton } from "./count.style";
+import { useStore } from "@/store";
 
-const Count = () => {
-  const [unit, setUnits] = useState<number>(1);
+const Count = ({ quantity, id }: { quantity: number; id: string }) => {
+  const [unit, setUnit] = useState<number>(0);
+
+  useEffect(() => {
+    setUnit(quantity);
+  }, [quantity]);
+
+  const { updateQuantity } = useStore();
 
   const handleUnitAdd = () => {
-    setUnits((prev) => prev + 1);
+    updateQuantity(id, "increase");
   };
 
   const handleUnitSubtract = () => {
     if (unit === 1) return;
-    setUnits((prev) => prev - 1);
+    updateQuantity(id, "decrease");
   };
+
   return (
     <CountButton>
       <button onClick={handleUnitSubtract} disabled={unit === 1 ? true : false}>

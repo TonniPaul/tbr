@@ -1,11 +1,32 @@
 import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
 import { GrandTotal, SubTotalContainer } from "./subTotal.styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useStore } from "@/store";
 
 const SubTotal = () => {
-  const [itemCount, swtItemCOunt] = useState<number>(1);
-  const amount = 4800;
-  const discount = (amount / 100) * 5;
+  const [cartCount, setCartCount] = useState<number>(0);
+  const [total, setTotal] = useState<number>(0);
+  const [discount, setDiscount] = useState<number>(0);
+  const [grandTotal, setGrandTotal] = useState<number>(0);
+  const { cart } = useStore();
+
+  useEffect(() => {
+    const calculateTotal = () => {
+      return cart.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+    };
+
+    const newTotal = calculateTotal();
+    const newDiscount = (newTotal / 100) * 5;
+    const newGrandTotal = newTotal - newDiscount;
+
+    setCartCount(cart.length);
+    setTotal(newTotal);
+    setDiscount(newDiscount);
+    setGrandTotal(newGrandTotal);
+  }, [cart]);
 
   return (
     <SubTotalContainer>
@@ -14,11 +35,11 @@ const SubTotal = () => {
           Subtotal
           <span>
             {" "}
-            (<BoldText>{itemCount}</BoldText> {itemCount > 1 ? "items" : "item"}{" "}
+            (<BoldText>{cartCount}</BoldText> {cartCount > 1 ? "items" : "item"}{" "}
             ):
           </span>
         </span>
-        <span>NGN {amount.toLocaleString()}</span>
+        <span>NGN {total.toLocaleString()}</span>
       </p>
       <p>
         <span> Discount (5% off):</span>
@@ -27,10 +48,7 @@ const SubTotal = () => {
 
       <GrandTotal>
         <span> Grand Total:</span>
-        <span>
-          NGN
-          {(amount - discount).toLocaleString()}{" "}
-        </span>
+        <span>NGN {grandTotal.toLocaleString()}</span>
       </GrandTotal>
       <ActionButtonStyle>Proceed to Checkout</ActionButtonStyle>
     </SubTotalContainer>

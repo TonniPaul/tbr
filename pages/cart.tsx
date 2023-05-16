@@ -76,7 +76,7 @@ const CartPage = () => {
               </Link>
             </EmptyCartStyle>
           )}
-          <SubTotal />
+          {cart.length !== 0 && <SubTotal />}{" "}
         </CartMainContainer>
       </NoFooterLayout>
     </>

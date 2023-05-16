@@ -10,7 +10,7 @@ export interface CartSliceType {
   cart: CartProps[];
   addToCart: (product: CartProps) => void;
   removeFromCart: (productId: string) => void;
-  //   updateQuantity: (productId: number, action: "increase" | "decrease") => void;
+  updateQuantity: (productId: string, action: "increase" | "decrease") => void;
 }
 
 export const cartSlice: StateCreator<CartSliceType> = (set, get) => ({
@@ -33,18 +33,18 @@ export const cartSlice: StateCreator<CartSliceType> = (set, get) => ({
     set({ cart: get().cart.filter((product) => product.id !== productId) });
   },
 
-  //   updateQuantity: (productId: string, action: "increase" | "decrease") => {
-  //     const cart = get().cart;
-  //     const findProduct = cart.find((p) => p.id === productId);
-  //     if (findProduct) {
-  //       if (action === "decrease") {
-  //         findProduct.quantity =
-  //           findProduct.quantity! > 1
-  //             ? findProduct.quantity! - 1
-  //             : findProduct.quantity!;
-  //       } else {
-  //          findProduct.quantity! += 1;
-  //       }
-  //     }
-  //   },
+  updateQuantity: (productId: string, action: "increase" | "decrease") => {
+    const cart = get().cart;
+    const findProduct = cart.find((p) => p.id === productId);
+    if (findProduct) {
+      if (action === "decrease") {
+        findProduct.quantity =
+          findProduct.quantity! > 1
+            ? findProduct.quantity! - 1
+            : findProduct.quantity!;
+      } else {
+        findProduct.quantity! += 1;
+      }
+    }
+  },
 });

@@ -9,6 +9,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Count from "../CountComponent/Count";
 import { useStore } from "@/store";
+import Link from "next/link";
 
 interface CartCardProps {
   id: string;
@@ -48,7 +49,9 @@ const CartItemsCard = ({
   return (
     <CartItems>
       <CartImageContainer>
-        <Image src={image} alt={`${name} image`} width={300} height={300} />
+        <Link href={`/shop/${id}`}>
+          <Image src={image} alt={`${name} image`} width={300} height={300} />
+        </Link>
       </CartImageContainer>
       <CartItemsData>
         <p> {name} </p>
@@ -57,7 +60,7 @@ const CartItemsCard = ({
             {currency} {price.toLocaleString()}
           </BoldText>
         </p>
-        <Count />
+        <Count quantity={quantity} id={id} />
 
         {!isRemoving && (
           <ActionButtonStyle onClick={handleRemoveClick}>

@@ -17,11 +17,7 @@ export const SubTotalContainer = styled.div`
 
   & button {
     width: 100%;
-    border: 1px solid var(--yellow);
-
-    @media (min-width: 600px) {
-      padding: 0.5rem 1rem;
-    }
+    justify-content: center;
   }
   @media (min-width: 600px) {
     width: 40%;

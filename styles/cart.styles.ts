@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CartMainContainer = styled.div`
   background: var(--light-grey);
+  min-height: calc(100vh - 105px);
 
   padding: 1rem;
 
@@ -94,10 +95,12 @@ export const CartItemsData = styled.div`
 
 export const EmptyCartStyle = styled.div`
   width: 100%;
+  height: max-content;
   padding: 2rem;
   text-align: center;
   background: var(--white);
   border-radius: var(--border_radius_small);
+  align-items: center;
 
   & p {
     font-size: 17px;
@@ -107,5 +110,5 @@ export const EmptyCartStyle = styled.div`
 
 export const ConfirmRemoveContainer = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 10px;
 `;
