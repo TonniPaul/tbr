@@ -23,7 +23,15 @@ export const cartSlice: StateCreator<CartSliceType> = (set, get) => ({
     if (findProduct) {
       findProduct.quantity += 1;
     } else {
-      cart.push({ ...product, quantity: 1 });
+      const inventory = fetchProductId(product.id)?.inventory;
+      if (
+        (inventory?.stock && inventory.stock > 0) ||
+        inventory?.availability === false
+      ) {
+        cart.push({ ...product, quantity: 1 });
+      } else {
+        return;
+      }
     }
     set({ cart });
     console.log(cart);
