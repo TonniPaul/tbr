@@ -5,24 +5,18 @@ import NoFooterLayout from "@/components/Layout/noFooterLayout";
 import Toast from "@/components/Toast/Toast";
 import { useStore } from "@/store";
 import {
-  CartImageContainer,
-  CartItems,
   CartItemsContainer,
-  CartItemsData,
   CartMainContainer,
-  ConfirmRemoveContainer,
   EmptyCartStyle,
 } from "@/styles/cart.styles";
 import { ActionButtonStyle, BoldText } from "@/styles/globals.styles";
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const CartPage = () => {
   const [isDeleted, setIsDeleted] = useState<boolean>(false);
-  const items = 2;
-
+  const router = useRouter();
   const { cart, removeFromCart } = useStore();
 
   useEffect(() => {
@@ -44,8 +38,12 @@ const CartPage = () => {
         <CartMainContainer>
           {cart.length > 0 ? (
             <CartItemsContainer>
-              <p>Your Shopping Cart</p>
-
+              <div>
+                <p>Your Shopping Cart</p>
+                <ActionButtonStyle onClick={() => router.push("/shop")}>
+                  Continue Shopping
+                </ActionButtonStyle>
+              </div>
               <div>
                 {cart.map((cartItems) => {
                   return (

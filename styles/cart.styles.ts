@@ -30,10 +30,20 @@ export const CartItemsContainer = styled.div`
     flex-basis: 60%;
   }
 
-  & > p:first-child {
-    font-size: 17px;
-    font-weight: 700;
+  & > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-bottom: 1rem;
+
+    & > p {
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    & button {
+      margin: 0;
+    }
   }
 `;
 

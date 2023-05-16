@@ -53,14 +53,21 @@ const ProductCard = (product: AllProducts) => {
       <ProductPriceStyle onClick={handleProductRoute}>
         {product.currency} {product.price.toLocaleString()}
       </ProductPriceStyle>
-      <ActionButtonStyle onClick={handleAddToCart}>
-        <Image
-          src="/assets/cart-icon.svg"
-          alt="cartIcon"
-          width={20}
-          height={20}
-        />
-        <span>Add to Cart</span>
+      <ActionButtonStyle
+        disabled={product.inventory.stock === 0}
+        onClick={handleAddToCart}
+      >
+        {product.inventory.stock !== 0 && (
+          <Image
+            src="/assets/cart-icon.svg"
+            alt="cartIcon"
+            width={20}
+            height={20}
+          />
+        )}
+        <span>{`${
+          product.inventory.stock !== 0 ? "Add to Cart" : "Out of Stock"
+        }`}</span>
       </ActionButtonStyle>
       <Toast
         status={product.inventory.stock === 0 ? "Failed" : "Success"}

@@ -80,7 +80,9 @@ const ProductId = ({ product }: { product: AllProducts }) => {
               onClick={handleCartClick}
               disabled={product.inventory?.stock === 0 ? true : false}
             >
-              Add to Cart
+              {`${
+                product.inventory.stock !== 0 ? "Add to Cart" : "Out of Stock"
+              }`}
             </ActionButtonStyle>
             <Toast message={"Added to Cart 😊"} isVisible={showToast} />
           </DetailedProductDataStyle>
