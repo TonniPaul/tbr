@@ -72,7 +72,10 @@ const CartPage = () => {
               {cart.length > 1 && (
                 <ClearCartContainerStyle>
                   {!clearCart && (
-                    <ActionButtonStyle onClick={() => setClearCart(true)}>
+                    <ActionButtonStyle
+                      color={"var(--white)"}
+                      onClick={() => setClearCart(true)}
+                    >
                       Clear Cart
                     </ActionButtonStyle>
                   )}
