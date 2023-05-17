@@ -14,7 +14,7 @@ export default function Home({ products }: MyProductProps) {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   useEffect(() => {

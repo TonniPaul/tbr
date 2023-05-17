@@ -8,7 +8,6 @@ interface ColorsProps {
 export const SectionHeaderText = styled.div`
   font-size: 17px;
   font-weight: 800;
-  padding: 2rem 0;
   text-transform: uppercase;
 
   @media (min-width: 768px) {

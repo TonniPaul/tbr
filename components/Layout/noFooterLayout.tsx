@@ -17,7 +17,7 @@ function NoFooterLayout({ children, title }: Props) {
           content="The best thrift clothing and accessories are handpicked especially for you."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon.jpg" />
+        <link rel="icon" href="/assets/Logo-yello.png" />
         <title>
           {title ? `${title} - TBR Store` : "Thrifts By Ronn Store"}
         </title>

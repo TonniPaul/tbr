@@ -26,7 +26,7 @@ const CartPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsDeleted(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [isDeleted]);
