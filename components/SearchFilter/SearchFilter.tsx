@@ -7,10 +7,19 @@ import {
 import Image from "next/image";
 
 const myProductCategories = [
-  { category: "bag" },
-  { category: "Gowns" },
-  { category: "Top" },
-  { category: "Trouser" },
+  { category: "All Products" },
+  { category: "Shirt" },
+  { category: "Bags" },
+  { category: "Dresses" },
+  { category: "Accessories" },
+  { category: "Shoes" },
+  { category: "Skirts" },
+  { category: "Outerwear" },
+  { category: "Shorts" },
+  { category: "Jackets" },
+  { category: "Tops" },
+  { category: "Sleepwear" },
+  { category: "Home Decor" },
 ];
 
 interface InputProps {
