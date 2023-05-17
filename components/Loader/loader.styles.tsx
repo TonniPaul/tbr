@@ -15,6 +15,7 @@ export const LoaderContainer = styled.div`
   transition: var(--short-transition);
   overflow: hidden;
   position: fixed;
+  background: var(--white);
   top: 0;
   z-index: 7;
 

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import Navbar from "../Navbar/Navbar";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import Head from "next/head";

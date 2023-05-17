@@ -2,7 +2,6 @@ import { ReactNode, useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
-import Loader from "../Loader/Loader";
 import Head from "next/head";
 
 type Props = {
@@ -11,26 +10,8 @@ type Props = {
 };
 
 function Layout({ children, title }: Props) {
-  // const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 5000);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (isLoading) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "";
-  //   }
-  // }, [isLoading]);
-
   return (
     <>
-      {/* {isLoading && <Loader />} */}
       <Head>
         <meta
           name="description"
