@@ -60,8 +60,6 @@ export const FilterByCategoryStyle = styled.div<{ isOpen: boolean }>`
     width: 200px;
     transition: var(--short-transition);
     border-radius: 5px;
-    /* overflow: hidden; */
-
     opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
 
     & p {
