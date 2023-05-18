@@ -22,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setCartCount(cart);
-  });
+  }, [cart]);
 
   const router = useRouter();
 
