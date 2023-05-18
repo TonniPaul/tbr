@@ -4,6 +4,7 @@ import SubTotal from "@/components/Cards/Subtotal/SubTotal";
 import NoFooterLayout from "@/components/Layout/noFooterLayout";
 import Toast from "@/components/Toast/Toast";
 import { useStore } from "@/store";
+import { CartProps } from "@/store/cartSlice";
 import {
   CartItemsContainer,
   CartMainContainer,
@@ -19,6 +20,7 @@ import { useEffect, useState } from "react";
 const CartPage = () => {
   const [isDeleted, setIsDeleted] = useState<boolean>(false);
   const [clearCart, setClearCart] = useState<boolean>(false);
+  const [myCart, setMyCart] = useState<CartProps[]>([]);
   const router = useRouter();
   const { cart, removeFromCart, reset } = useStore();
 
@@ -31,6 +33,10 @@ const CartPage = () => {
     return () => clearTimeout(timer);
   }, [isDeleted]);
 
+  useEffect(() => {
+    return setMyCart(cart);
+  }, [cart]);
+
   const handleConfirmClick = () => {
     removeFromCart;
     setIsDeleted(true);
@@ -40,7 +46,7 @@ const CartPage = () => {
     <>
       <NoFooterLayout>
         <CartMainContainer>
-          {cart.length > 0 ? (
+          {myCart?.length > 0 ? (
             <CartItemsContainer>
               <div>
                 <p>Your Shopping Cart</p>
@@ -49,7 +55,7 @@ const CartPage = () => {
                 </ActionButtonStyle>
               </div>
               <div>
-                {cart.map((cartItems) => {
+                {myCart.map((cartItems) => {
                   return (
                     <CartItemsCard
                       key={cartItems.id}
@@ -105,7 +111,7 @@ const CartPage = () => {
               </Link>
             </EmptyCartStyle>
           )}
-          {cart.length !== 0 && <SubTotal />}{" "}
+          {myCart.length !== 0 && <SubTotal />}{" "}
         </CartMainContainer>
       </NoFooterLayout>
     </>

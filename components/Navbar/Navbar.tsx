@@ -13,10 +13,16 @@ import {
 } from "./navbar.styles";
 import { useRouter } from "next/router";
 import { useStore } from "@/store";
+import { CartProps } from "@/store/cartSlice";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [cartCount, setCartCount] = useState<CartProps[]>([]);
   const { cart } = useStore();
+
+  useEffect(() => {
+    setCartCount(cart);
+  });
 
   const router = useRouter();
 
@@ -92,7 +98,7 @@ const Navbar = () => {
               width={20}
               height={20}
             />
-            <p>{cart.length} </p>
+            <p>{cartCount.length} </p>
             {/* </Link> */}
           </CartButton>
         </nav>
