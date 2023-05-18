@@ -18,6 +18,7 @@ interface CartCardProps {
   price: number;
   quantity: number;
   currency: string;
+  stock: number;
   onConfirmClick: () => void;
 }
 
@@ -29,6 +30,7 @@ const CartItemsCard = ({
   quantity,
   onConfirmClick,
   currency,
+  stock,
 }: CartCardProps) => {
   const [isRemoving, setIsRemoving] = useState<boolean>(false);
   const { removeFromCart } = useStore();
@@ -60,7 +62,8 @@ const CartItemsCard = ({
             {currency} {price.toLocaleString()}
           </BoldText>
         </p>
-        <Count quantity={quantity} id={id} />
+        <small>Quantity: {quantity} </small>
+        <Count quantity={quantity} id={id} stock={stock} />
 
         {!isRemoving && (
           <ActionButtonStyle onClick={handleRemoveClick}>

@@ -66,6 +66,7 @@ const CartPage = () => {
                       onConfirmClick={handleConfirmClick}
                       currency={cartItems.currency}
                       id={cartItems.id}
+                      stock={cartItems.inventory.stock}
                     />
                   );
                 })}
