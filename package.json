@@ -12,14 +12,18 @@
     "@types/node": "20.0.0",
     "@types/react": "18.2.5",
     "@types/react-dom": "18.2.4",
+    "add": "^2.0.6",
+    "babel-plugin-styled-components": "^2.1.1",
     "eslint": "8.39.0",
     "eslint-config-next": "13.4.1",
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-paystack": "^4.0.3",
     "styled-components": "^5.3.10",
     "swr": "^2.1.5",
     "typescript": "5.0.4",
+    "yarn": "^1.22.19",
     "zustand": "^4.3.8"
   },
   "devDependencies": {
