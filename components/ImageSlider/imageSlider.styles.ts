@@ -35,8 +35,8 @@ export const ImageSliderContainer = styled.div`
     width: 70%;
     text-align: right;
 
-    @media (min-width: 768px) {
-      font-size: 4rem;
+    @media (min-width: 900px) {
+      font-size: 3rem;
     }
   }
 `;
@@ -46,6 +46,12 @@ export const ImageContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+`;
+
+export const SliderHeaderText = styled.h1`
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const SliderImages = styled(Image)<ImageSliderStyleProps>`

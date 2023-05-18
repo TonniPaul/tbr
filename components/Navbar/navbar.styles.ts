@@ -11,7 +11,6 @@ export const HeaderStyle = styled.header`
   & > div:first-child {
     display: flex;
     gap: 10px;
-    font-size: 0.875rem;
     background: var(--yellow);
     color: var(--black);
     padding: 0.7rem 1rem;

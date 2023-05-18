@@ -19,7 +19,7 @@ export const SubTotalContainer = styled.div`
     width: 100%;
     justify-content: center;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     width: 40%;
     margin: 0;
   }

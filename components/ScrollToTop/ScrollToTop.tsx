@@ -35,8 +35,8 @@ const ScrollToTop = () => {
         <Image
           src="/assets/next.png"
           alt="scroll-to-top icon"
-          width={30}
-          height={30}
+          width={25}
+          height={25}
           onClick={scrollToTop}
         />
       )}
