@@ -32,3 +32,7 @@ export const PaginationBtn = styled.button<{ active: boolean }>`
   border-radius: 5px;
   cursor: pointer;
 `;
+
+export const NotFoundStyle = styled.div`
+  padding: 0 2rem;
+`;

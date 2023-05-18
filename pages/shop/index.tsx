@@ -1,5 +1,6 @@
 import ProductSectionsCard from "@/components/Cards/ProductSectionsCard/ProductSectionsCard";
 import {
+  NotFoundStyle,
   PaginationBtn,
   PaginationContainer,
   ShopPageStyles,
@@ -17,7 +18,7 @@ const Shop = ({ products }: MyProductProps) => {
   const [productsPerPage] = useState(15);
 
   const handleSearch = (searchValue: string, filteredCategory: string) => {
-    const filteredCountries = products
+    const filteredProduct = products
       .filter((products) =>
         filteredCategory === "All Products" || filteredCategory === ""
           ? products
@@ -28,8 +29,8 @@ const Shop = ({ products }: MyProductProps) => {
           products.name.toLowerCase().includes(searchValue.toLowerCase()) ||
           products.brand?.toLowerCase().includes(searchValue.toLowerCase())
       );
-    if (filteredCountries.length > 0) {
-      setSearchedResult(filteredCountries);
+    if (filteredProduct.length > 0) {
+      setSearchedResult(filteredProduct);
     } else {
       setSearchedResult([]);
     }
@@ -47,12 +48,12 @@ const Shop = ({ products }: MyProductProps) => {
     setCurrentPage(1); // reset current page to 1 after search/filter
   };
 
-  // calculate indexes of countries to display based on current page and countries per page
+  // calculate indexes of product to display based on current page and product per page
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const totalPages = Math.ceil(searchedResult.length / productsPerPage);
 
-  const currentCountries = searchedResult.slice(
+  const displayedProducts = searchedResult.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
@@ -75,39 +76,50 @@ const Shop = ({ products }: MyProductProps) => {
             handleFilterByCategory={handleFilterByRegion}
             onChange={handleSearch}
           />
-          <ProductSectionsCard product={currentCountries} />
-          <PaginationContainer>
-            {currentPage !== 1 && (
-              <Image
-                src="/assets/previous.png"
-                alt="prev-button"
-                width={20}
-                height={20}
-                onClick={handlePrev}
-              />
-            )}
-            {pageNumbers.map((nPage) => {
-              return (
-                <PaginationBtn
-                  active={nPage === currentPage}
-                  key={nPage}
-                  onClick={() => setCurrentPage(nPage)}
-                >
-                  {nPage}
-                </PaginationBtn>
-              );
-            })}
+          {displayedProducts.length > 0 ? (
+            <ProductSectionsCard product={displayedProducts} />
+          ) : (
+            <NotFoundStyle>
+              <p>
+                Apologies, the item searched cannot be found in our database.
+                Please try another product name.
+              </p>
+            </NotFoundStyle>
+          )}
+          {displayedProducts.length !== 0 && (
+            <PaginationContainer>
+              {currentPage !== 1 && (
+                <Image
+                  src="/assets/previous.png"
+                  alt="prev-button"
+                  width={20}
+                  height={20}
+                  onClick={handlePrev}
+                />
+              )}
+              {pageNumbers.map((nPage) => {
+                return (
+                  <PaginationBtn
+                    active={nPage === currentPage}
+                    key={nPage}
+                    onClick={() => setCurrentPage(nPage)}
+                  >
+                    {nPage}
+                  </PaginationBtn>
+                );
+              })}
 
-            {currentPage !== totalPages && (
-              <Image
-                src="/assets/next.png"
-                alt="prev-button"
-                width={20}
-                height={20}
-                onClick={handleNext}
-              />
-            )}
-          </PaginationContainer>
+              {currentPage !== totalPages && (
+                <Image
+                  src="/assets/next.png"
+                  alt="prev-button"
+                  width={20}
+                  height={20}
+                  onClick={handleNext}
+                />
+              )}
+            </PaginationContainer>
+          )}
         </ShopPageStyles>
       </Layout>
     </>
