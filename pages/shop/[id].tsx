@@ -75,7 +75,11 @@ const ProductId = ({ product }: { product: AllProducts }) => {
                 ? "OUT OF STOCK"
                 : `STOCK: ${product.inventory?.stock}`}
             </small>
-            <Count quantity={1} id={product.id} />
+            <Count
+              quantity={1}
+              stock={product.inventory.stock}
+              id={product.id}
+            />
             <ActionButtonStyle
               onClick={handleCartClick}
               disabled={product.inventory?.stock === 0 ? true : false}
