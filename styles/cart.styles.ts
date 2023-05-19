@@ -3,10 +3,9 @@ import styled from "styled-components";
 export const CartMainContainer = styled.div`
   background: var(--light-grey);
   min-height: calc(100vh - 105px);
-
   padding: 1rem;
 
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -25,8 +24,9 @@ export const CartItemsContainer = styled.div`
   position: relative;
   height: max-content;
   max-width: 1440px;
+  margin-bottom: 1rem;
 
-  @media (min-width: 550px) {
+  @media (min-width: 900px) {
     flex-basis: 60%;
   }
 
