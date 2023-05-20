@@ -1,5 +1,35 @@
 [
   {
+    "id": "WQY901",
+    "name": "Vintage Shirt",
+    "description": "Stay classy with this timeless striped Short Sleeve Patterned Vintage Shirt For Men. Perfect for a smart-casual look.",
+    "price": 8999,
+    "currency": "NGN",
+    "categories": "Shirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/striped-polo.jpg"
+  },
+
+  {
+    "id": "STCR702",
+    "name": "Match Point Tennis Skirt",
+    "description": "Grand Slam tournaments? Check! Olympic medals? Check! No. 1 golden girl Ash is our fitspo crush right now, so we're stealing her style with this super cute Match Point tennis skirt. Constructed with Eco Relay for a lightweight fit, freedom of movement and breathability, and featuring under short with side pockets, this is the perfect tennis companion! But why not take this number beyond the sidelines and wear it for running, team sports, or cheering on your fav player from the couch!",
+    "price": 13999,
+    "currency": "NGN",
+    "categories": "Skirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/tennis-skirt.jpg"
+  },
+
+  {
     "id": "ABC123",
     "name": "Floral Shirt",
     "description": "This is a floral shirt that combines style and comfort. Perfect for any occasion.",
@@ -11,7 +41,7 @@
       "stock": 0,
       "availability": false
     },
-    "images": "/assets/Cloth-1.png"
+    "images": "/assets/floralShirt.jpg"
   },
   {
     "id": "DEF456",
@@ -25,7 +55,35 @@
       "stock": 20,
       "availability": true
     },
-    "images": "/assets/Cloth-2.png"
+    "images": "/assets/denim.jpg"
+  },
+  {
+    "id": "STC02",
+    "name": "High Rise Tweed Mini Skirt ",
+    "description": "This Women's High Rise Tweed Mini Skirt  is a versatile piece that can be dressed up or down.",
+    "price": 12999,
+    "currency": "NGN",
+    "categories": "Skirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/high-rise-skirt.jpg"
+  },
+  {
+    "id": "STC8702",
+    "name": "Ladies Skirt",
+    "description": "This pleated mini skirt is a versatile piece that can be dressed up or down.",
+    "price": 27999,
+    "currency": "NGN",
+    "categories": "Skirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 10,
+      "availability": true
+    },
+    "images": "/assets/ladies-skirt.jpg"
   },
   {
     "id": "GHI789",
@@ -39,7 +97,21 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/leatherbag.jpg"
+  },
+  {
+    "id": "WXY701",
+    "name": "Geometric Shirt",
+    "description": "This bowling shirt features bright and colourful geometric motifs that recall the uniforms worn by horse riding jockeys. The collection is inspired by the Parade Ring, or paddock, where horses walk around as a warm-up before the race and to help racegoers pick a winner.",
+    "price": 18999,
+    "currency": "NGN",
+    "categories": "Shirts",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 45,
+      "availability": true
+    },
+    "images": "/assets/geaometric-shirt.jpg"
   },
   {
     "id": "JKL012",
@@ -53,7 +125,7 @@
       "stock": 5,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/stripedress.jpg"
   },
   {
     "id": "MNO345",
@@ -67,7 +139,7 @@
       "stock": 30,
       "availability": true
     },
-    "images": "/assets/product5.jpg"
+    "images": "/assets/graphictshirt.jpg"
   },
 
   {
@@ -82,7 +154,7 @@
       "stock": 25,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/leatherbelt.jpg"
   },
   {
     "id": "PQR678",
@@ -96,7 +168,7 @@
       "stock": 15,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/casualsneakers.jpg"
   },
   {
     "id": "STU901",
@@ -110,7 +182,7 @@
       "stock": 8,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/eveninggown.jpg"
   },
 
   {
@@ -125,7 +197,7 @@
       "stock": 12,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/sportscap.jpg"
   },
 
   {
@@ -140,7 +212,7 @@
       "stock": 7,
       "availability": true
     },
-    "images": "/assets/Cloth-2.png"
+    "images": "/assets/bag.jpg"
   },
   {
     "id": "HIJ456",
@@ -154,7 +226,21 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/wrapdress.jpg"
+  },
+  {
+    "id": "PAR678",
+    "name": "Breathable Sneakers",
+    "description": "These casual Sport Men's Breathable Running sneakers offer both comfort and style. Perfect for everyday wear.",
+    "price": 8999,
+    "currency": "NGN",
+    "categories": "Shoes",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 15,
+      "availability": true
+    },
+    "images": "/assets/breaheable.jpg"
   },
   {
     "id": "BCD890",
@@ -168,9 +254,22 @@
       "stock": 18,
       "availability": true
     },
-    "images": "/assets/product5.jpg"
+    "images": "/assets/maxiskirt.jpg"
   },
-
+  {
+    "id": "EFG123",
+    "name": "Gym & Travel Duffel Bag",
+    "description": "Carry your essentials in style with this trendy Gym & Travel Duffel Bag. Perfect for daily use.",
+    "price": 2599,
+    "currency": "NGN",
+    "categories": "Bags",
+    "brand": "Brand Name",
+    "inventory": {
+      "stock": 7,
+      "availability": true
+    },
+    "images": "/assets/gym-bag.jpg"
+  },
   {
     "id": "TUV678",
     "name": "Leather Wallet",
@@ -183,7 +282,7 @@
       "stock": 25,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/leatherwallet.jpg"
   },
   {
     "id": "ZAB234",
@@ -197,7 +296,7 @@
       "stock": 7,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/fringe-bag.jpg"
   },
 
   {
@@ -212,7 +311,7 @@
       "stock": 12,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/cotton-chinos.jpg"
   },
 
   {
@@ -227,7 +326,7 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/kimono.jpg"
   },
 
   {
@@ -242,7 +341,7 @@
       "stock": 15,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/sunglass.jpg"
   },
   {
     "id": "NOP012",
@@ -256,7 +355,7 @@
       "stock": 20,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/scarf.jpg"
   },
   {
     "id": "QRS345",
@@ -270,7 +369,7 @@
       "stock": 8,
       "availability": true
     },
-    "images": "/assets/product5.jpg"
+    "images": "/assets/ripped-denim-shorts.jpg"
   },
 
   {
@@ -285,7 +384,7 @@
       "stock": 15,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/striped-polo.jpg"
   },
   {
     "id": "EFG890",
@@ -299,7 +398,7 @@
       "stock": 20,
       "availability": true
     },
-    "images": "/assets/product5.jpg"
+    "images": "/assets/wristwatch.jpg"
   },
   {
     "id": "XYZ901",
@@ -313,7 +412,7 @@
       "stock": 8,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/dress.jpg"
   },
   {
     "id": "ABC234",
@@ -327,7 +426,7 @@
       "stock": 15,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/straw-beach-hat.jpg"
   },
   {
     "id": "DEF567",
@@ -341,7 +440,7 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/denim-jacket.jpg"
   },
   {
     "id": "GHI890",
@@ -355,7 +454,7 @@
       "stock": 20,
       "availability": true
     },
-    "images": "/assets/product5.jpg"
+    "images": "/assets/fringe-earrings.jpg"
   },
   {
     "id": "JKL123",
@@ -369,7 +468,7 @@
       "stock": 12,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/printed-palazo-pants.jpg"
   },
   {
     "id": "STU902",
@@ -383,7 +482,7 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/miniskirt.jpg"
   },
   {
     "id": "STU903",
@@ -397,7 +496,7 @@
       "stock": 6,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/crop-top.jpg"
   },
   {
     "id": "STU904",
@@ -411,7 +510,7 @@
       "stock": 12,
       "availability": true
     },
-    "images": "/assets/product5.jpg"
+    "images": "/assets/vintage-denim-jacket.jpg"
   },
   {
     "id": "STU905",
@@ -425,7 +524,7 @@
       "stock": 4,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/leather-legging.jpg"
   },
   {
     "id": "STU906",
@@ -439,7 +538,7 @@
       "stock": 16,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/chunky-sneakers.jpg"
   },
   {
     "id": "STU907",
@@ -453,7 +552,7 @@
       "stock": 8,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/satchel-bag.jpg"
   },
   {
     "id": "STU950",
@@ -467,7 +566,7 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product1.jpg"
+    "images": "/assets/silk-pyjamas.jpg"
   },
   {
     "id": "STU951",
@@ -481,7 +580,7 @@
       "stock": 12,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/fleece-blanket.jpg"
   },
   {
     "id": "STU952",
@@ -495,7 +594,7 @@
       "stock": 8,
       "availability": true
     },
-    "images": "/assets/product4.jpg"
+    "images": "/assets/coffee-mug.jpg"
   },
   {
     "id": "STU953",
@@ -509,7 +608,7 @@
       "stock": 6,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/planter.jpg"
   },
   {
     "id": "STU954",
@@ -523,7 +622,7 @@
       "stock": 10,
       "availability": true
     },
-    "images": "/assets/product3.jpg"
+    "images": "/assets/throw-pillow.jpg"
   },
   {
     "id": "STU955",
@@ -537,6 +636,6 @@
       "stock": 4,
       "availability": true
     },
-    "images": "/assets/product2.jpg"
+    "images": "/assets/nightstand.jpg"
   }
 ]
