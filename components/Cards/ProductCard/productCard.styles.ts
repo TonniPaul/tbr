@@ -28,6 +28,7 @@ export const ProductCardImageContainer = styled.div`
     width: 100%;
     height: 100%;
     transition: scale var(--short-transition);
+    object-fit: contain;
 
     &:hover {
       scale: 1.1;
