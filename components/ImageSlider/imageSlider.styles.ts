@@ -110,9 +110,8 @@ export const SliderActiveButtons = styled.div`
 export const Dots = styled.span<ImageSliderStyleProps>`
   width: 25px;
   height: 8px;
-  background: ${({ isCurrent }) => (isCurrent ? "var(--dark-grey)" : "#ccc")};
+  background: ${({ isCurrent }) => (isCurrent ? 'var(--dark-grey)' : '#ccc')};
   margin: 2rem 0 0;
   border-radius: 3px;
   cursor: pointer;
-  transition: 1s ease-in-out;
 `;
